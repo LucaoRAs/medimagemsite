@@ -1,0 +1,1503 @@
+/* ---------------------------- CSS Personalizado ---------------------------- */
+
+/* -------------------------------------- Menu -------------------------------------- */
+
+/* Define margens e fonte padrão */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Evita rolagem lateral */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilo do logotipo no menu */
+.logo_menu img {
+  max-width: 180px;
+  /* Define o tamanho máximo */
+  height: auto;
+  /* Mantém a proporção */
+  margin-left: 15px;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+  /* Transição suave para o efeito */
+}
+
+.logo_menu img:hover {
+  transform: scale(1.2);
+  /* Escala o logotipo ao passar o mouse */
+}
+
+/* Espaçamento do menu */
+.menu {
+  padding-top: 10px;
+}
+
+/* Estilo dos ícones sociais */
+.sociais_menu img {
+  max-width: 30px;
+  /* Define o tamanho máximo */
+  height: auto;
+  /* Mantém a proporção */
+  transition: 0, 3s;
+  margin: -15px;
+}
+
+.sociais_menu img:hover {
+  transform: scale(1.2);
+  /* Escala o ícone ao passar o mouse */
+}
+
+.sociais_menu {
+  margin: 0 2px;
+  margin-left: 1px;
+}
+
+/* Linha decorativa */
+.linha {
+  margin-top: 0%;
+  border: 2px solid #881c56;
+  /* Cor da borda */
+}
+
+/* Esconde linha decorativa interna */
+.linha hr {
+  display: none;
+}
+
+/* Espaçamento e estilo dos links no menu principal */
+.custom-nav .nav-item {
+  margin: 0 1px;
+  /* Espaçamento lateral entre os itens */
+  position: relative;
+  font-weight: bold;
+  font-size: 15px;
+  color: #658795;
+}
+
+.custom-nav .nav-item :hover {
+  color: #881c56;
+  /* Cor do texto */
+}
+
+.custom-nav .nav-link .dropdown-item {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  /* Negrito */
+  font-size: 14px;
+  /* Tamanho da fonte */
+  color: #658795;
+}
+
+/* Estilo dos links no menu secundário */
+.dropdown-menu {
+  overflow: hidden;
+  max-height: calc(40vh - 75px);
+  overflow-y: scroll;
+}
+
+.custom-menu-dropdown.dropdown-menu {
+  position: relative;
+  /* Posiciona o menu abaixo do botão */
+  top: 100%;
+  /* Posiciona o menu 100px abaixo do botão */
+  left: 0;
+  /* Posiciona o menu à esquerda do botão */
+  background-color: #f9f9f9;
+  /* Cor de fundo do menu */
+  border: 1px solid #ddd;
+  /* Borda do menu */
+  border-radius: 4px;
+  /* Bordas arredondadas */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  /* Efeito de sombra */
+  padding: 10px;
+  /* Preenchimento interno do menu */
+  min-width: 150px;
+  /* Largura mínima do menu */
+  z-index: 1;
+  /* Posiciona o menu acima de outros elementos */
+  display: none;
+  /* O menu é escondido inicialmente */
+  transition: display 1s ease;
+  /* Animação suave */
+}
+
+/* botão de exames */
+.custom-menu-btn {
+  background-color: #881c56;
+  /* Cor de fundo */
+  color: #fff;
+  /* Cor do texto */
+  border: none;
+  /* Remove a borda */
+  border-radius: 4px;
+  /* Bordas levemente arredondadas */
+  font-weight: bold;
+  /* Texto em negrito */
+  font-size: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  /* Animação suave */
+  margin-top: 10px;
+  /* Ajusta o espaço superior */
+  margin-bottom: 10px;
+  /* Ajusta o espaço inferior */
+  margin-left: 22px;
+  margin-right: 22px;
+  padding: 8px 20px;
+  /* Ajusta o preenchimento interno */
+  line-height: 1;
+  /* Garante alinhamento interno do texto */
+  vertical-align: middle;
+  /* Centraliza em relação aos outros elementos */
+  height: auto;
+  /* Garante que o botão se ajuste automaticamente */
+}
+
+/* Estilo ao passar o mouse */
+.nav-item .custom-menu-btn:hover {
+  background-color: #881c56;
+  /* Cor de fundo ao passar o mouse */
+  color: white;
+  /* Garante que o texto permaneça branco */
+  transform: translateY(-2px);
+  /* Faz o botão "subir" */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra ao botão */
+}
+
+.navbar-nav .nav-link {
+  color: #658795;
+  /* Cor do texto */
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  /* Define os itens como flexíveis */
+  align-items: center;
+  /* Centraliza verticalmente os itens */
+}
+
+.btn-group.politica {
+  position: relative;
+  /* Define o grupo como referência para o dropdown */
+}
+
+.btn-transparent {
+  background-color: transparent;
+  /* Botão transparente */
+  border: none;
+  /* Remove bordas do botão */
+  color: #658795;
+  /* Cor do texto */
+  font-weight: bold;
+  /* Texto em negrito */
+  font-family: 'Quicksand', sans-serif;
+  /* Fonte personalizada */
+  padding: 5px 10px;
+  /* Espaçamento interno */
+}
+
+
+
+@media (max-width: 767px) {
+  .custom-menu-btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .titulo_exames strong {
+    font-size: 36px;
+  }
+
+  .texto1 {
+    font-size: 12px;
+  }
+
+  .sociais_menu img {
+    max-width: 30px;
+    /* Define o tamanho máximo */
+    height: auto;
+    /* Mantém a proporção */
+    transition: 0, 3s;
+    margin: -5px;
+  }
+
+  .sociais_menu img:hover {
+    transform: scale(1.2);
+    /* Escala o ícone ao passar o mouse */
+  }
+
+  .sociais_menu {
+    margin: 0 5px;
+    margin-left: 1px;
+
+  }
+
+}
+
+/* -------------------------------- footer -------------------------------- */
+/* Estilo para o footer */
+.footer {
+  color: #881c56;
+  /* Cor principal do texto */
+  border-top: 5px solid #658795;
+  /* Linha decorativa superior */
+  font-family: 'Quicksand', sans-serif;
+  /* Fonte personalizada */
+  padding: 0 20px;
+  background-image: linear-gradient(to top, #658795, #ffffff);
+}
+
+.footer .social-iconss {
+  display: flex;
+  /* Alinha os ícones horizontalmente */
+  gap: 15px;
+  /* Espaçamento entre os ícones */
+  align-items: center;
+  justify-content: left;
+  margin-top: 10px;
+
+}
+
+.footer .social-iconss img {
+  width: 40px;
+  margin: 0;
+  /* Remove margens extras */
+  cursor: pointer;
+  /* Indica que é clicável */
+  transition: transform 0.3s ease;
+  /* Efeito ao passar o mouse */
+}
+
+.footer .social-iconss img:hover {
+  transform: scale(1.2);
+  /* Ampliação leve ao passar o mouse */
+}
+
+.footer strong {
+  color: #881c56;
+  /* Cor destacada */
+  font-size: 20px;
+  /* Tamanho do título */
+  font-weight: bold;
+}
+
+.f1 {
+  margin-bottom: 10px;
+  /* Espaçamento inferior para os parágrafos */
+  line-height: 1.5;
+  /* Ajusta a altura da fonte */
+  text-align: center;
+  /* Centraliza o texto */
+  margin-top: 10px;
+}
+
+.footer .f {
+  margin-bottom: 0rem;
+  /* Espaçamento inferior para os parágrafos */
+  font-size: 18px;
+  /* Tamanho da fonte */
+  line-height: 1.5;
+  /* Ajusta a altura da fonte */
+  text-align: row;
+}
+
+.footer a {
+  color: #881c56;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer .f {
+  color: #881c56;
+  font-size: 18px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  /* Controle de largura máxima */
+}
+
+.footer .row {
+  display: flex;
+  align-items: flex-start;
+  /* Alinha o conteúdo ao topo */
+  padding: 20px;
+  /* Espaçamento interno */
+  margin: 0 auto;
+  /* Centraliza o conteúdo */
+  flex-wrap: wrap;
+  /* Torna as colunas encaixaveis */
+  gap: 20px;
+  /* Espaçamento entre linhas */
+
+}
+
+.footer .col1,
+.footer .col2 {
+  flex: 1;
+  /* As colunas ocupam larguras iguais */
+  margin: 0;
+  /* Espaçamento interno entre colunas */
+  text-align: left;
+  /* Alinha todo o texto à esquerda */
+  align-items: left;
+}
+
+.footer .col1 {
+  display: flex;
+  flex-direction: column;
+  /* Coloca os itens verticalmente */
+  margin-left: 250px;
+  align-items: left;
+}
+
+.footer .col2 {
+  margin-right: 60px;
+}
+
+.footer .logo {
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  footer .row {
+    text-align: center;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    /* Espaçamento uniforme entre as colunas */
+    align-items: flex-start;
+    /* Alinha os itens ao topo */
+    flex-wrap: wrap;
+    /* Permite que as colunas se ajustem em telas menores */
+    padding: 20px;
+  }
+
+  .footer .logo,
+  .footer .info,
+  .footer .logo img {
+    text-align: center;
+    max-width: 200px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer strong {
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .footer .col1,
+  .footer .col2 {
+    flex: 1;
+    /* As colunas ocupam o mesmo espaço */
+    margin: 0 10px;
+    /* Adiciona um pequeno espaçamento entre elas */
+    text-align: left;
+    /* Alinha o texto das colunas à esquerda */
+  }
+
+  .footer .col1 p,
+  .footer .col2 p {
+    margin: 5px 0;
+    /* Espaçamento uniforme entre os textos */
+    font-size: 14px;
+    /* Ajuste de tamanho da fonte */
+    line-height: 1.5;
+    /* Melhora a legibilidade do texto */
+    color: #881c56;
+    /* Cor do texto */
+    text-align: left;
+  }
+
+  .footer .social-iconss {
+    display: flex;
+    /* Deixa os ícones alinhados horizontalmente */
+    gap: 10px;
+    /* Espaçamento entre os ícones */
+    margin-top: 10px;
+  }
+
+  .footer .social-iconss img {
+    width: 40px;
+    height: auto;
+    margin: 0;
+    /* Remove margens extras */
+    cursor: pointer;
+    /* Indica que é clicável */
+    transition: transform 0.3s ease;
+    /* Efeito ao passar o mouse */
+  }
+}
+
+/* -------------------------------- index -------------------------------- */
+/* Grid de exames */
+.grid_exames {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: white;
+  /* Fundo branco */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  width: 100%;
+}
+
+.imgsite {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.titulo_exames {
+  font-size: 36px;
+  font-weight: bolder;
+  color: #881c56;
+  /* Azul escuro */
+  margin-bottom: 0px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.texto1 {
+  font-size: 22px;
+  color: #658795;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.saiba_mais {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  justify-content: left;
+  background-color: #881c56;
+  border: none;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  margin-top: 18px;
+}
+
+.saiba_mais:hover {
+  background-color: #881c56;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.agende_exame {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  background-color: #881c56;
+  border: none;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.agende_exame:hover {
+  background-color: #881c56;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.enviar_email {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  background-color: #fff;
+  border: none;
+  color: #881c56;
+  padding: 10px 40px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.enviar_email:hover {
+  background-color: #fff;
+  color: #881c56;
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+/* exames */
+.col {
+  background-color: transparent;
+  /* Cor de fundo da div */
+  align-items: flex-start;
+  color: #658795;
+  text-align: left;
+  line-height: 1.6;
+  /* Espaçamento entre linhas */
+  font-size: 26px;
+  font-family: "Quicksand-Medium", "Helvetica Neue", ;
+}
+
+.col img {
+  width: 630px;
+  height: 435px;
+}
+
+.duracao {
+  color: #881c56;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 0%;
+  margin-top: 25px;
+}
+
+.agendarexame {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  background-color: #881c56;
+  border: none;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.agendarexame:hover {
+  background-color: #881c56;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+/* Resultados de exames */
+.container {
+  margin-top: 30px;
+}
+
+.container h3 {
+  color: #881c56;
+  /* Azul escuro */
+  margin-bottom: 10px;
+}
+
+.container p {
+  font-size: 16px;
+  color: #555;
+  /* Cinza suave */
+}
+
+.container .linha hr {
+  border: 0;
+  border-top: 2px solid #881c56;
+  /* Azul escuro */
+  width: 50%;
+  margin: 0 auto 20px auto;
+}
+
+.container a img {
+  max-width: 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 50px;
+  margin-top: 10 px;
+}
+
+.container a img:hover {
+  transform: scale(1.1);
+}
+
+.tituloex {
+  font-size: 40px;
+  color: #881c56;
+}
+
+.subtituloex {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #658795;
+}
+
+.carousel-inner {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* carrossel de exames */
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.nossos_exames {
+  text-align: center;
+}
+
+.linha_exame {
+  margin: 0 auto;
+  border: 2px solid #659285;
+  /* Cor da borda */
+  max-width: 60%;
+  align-items: center;
+}
+
+.linha_exame hr {
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid_exames {
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  .titulo_exames {
+    font-size: 20px;
+  }
+
+  .saiba_mais {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .container .linha hr {
+    width: 70%;
+  }
+
+  .container a img {
+    max-width: 120px;
+  }
+
+  .acessoexame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .acessoexame a img {
+    max-width: 350px;
+    margin: 0px;
+  }
+
+  .acessoexame a img:hover {
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .linha {
+    margin-top: 20px;
+  }
+
+  .tituloex {
+    font-size: 30px;
+    color: #881c56;
+    margin: 10px;
+  }
+
+  .subtituloex {
+    color: #658795;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+}
+
+/* Estilo responsivo do mapa */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /* Proporção 16:9 */
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Estilo para o carrossel de imagens do index*/
+/* Ajuste geral para o carrossel */
+/* Estilo do carrossel */
+/* Estilo do carrossel */
+.carousel {
+  position: relative;
+  margin-top: 0%;
+  max-width: auto;
+  max-height: 700px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para imagens no carrossel */
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* Indicadores customizados */
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  border: none;
+  /* Corrigido de border: 100px */
+}
+
+.carousel-indicators .active {
+  background-color: #881c56;
+}
+
+
+/* Para seções abaixo do carrossel */
+.final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #881c56;
+  padding: 20px;
+}
+
+.fim {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  /* Ajusta a imagem sem distorcer */
+}
+
+/* Define largura para a seção de "nossos exames" */
+/* .nossos_exames {
+    width: 50%;
+} */
+.resultado {
+  margin-top: 30px;
+}
+
+.titulo {
+  color: #881c56;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.subtitulo {
+  color: #658795;
+  font-size: 22px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* botao do zap */
+/* Animação de pulsar */
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Classe para aplicar o efeito de pulsar */
+.pulsar {
+  transition: background-color 0.3 ease, box-shadow 0.3 ease;
+}
+
+/* Ampliar ao passar o mouse */
+.pulsar:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.formulario {
+  background-color: #881c56;
+}
+
+.formulario form {
+  margin-top: 5%;
+}
+
+
+/* carrossel de exames */
+
+.carrossel_exames {
+  display: flex;
+  flex-direction: column;
+  /* Alinha os filhos verticalmente */
+  padding: 30px 50px;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  /* Faz o carrossel ocupar toda a altura da tela */
+  background-image: url('../img/traces.png');
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.wrapper {
+  background-color: transparent;
+  max-width: 1100px;
+  /* Define a largura máxima */
+  width: 100%;
+  /* Preenche a largura total */
+  position: relative;
+  /* Permite posicionamento absoluto dos filhos */
+  display: flex;
+  /* Define layout flexível */
+  box-shadow: none;
+  align-items: center;
+  /* Centraliza verticalmente */
+  justify-content: center;
+  /* Centraliza horizontalmente os itens do carrossel */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+}
+
+/* Estiliza os botões de seta */
+.wrapper i {
+  top: 50%;
+  /* Posiciona verticalmente no meio */
+  height: 100px;
+  /* Altura dos botões */
+  width: 100px;
+  /* Largura dos botões */
+  cursor: pointer;
+  /* Define o cursor como pointer */
+  font-size: 1.25rem;
+  /* Tamanho da fonte */
+  position: absolute;
+  /* Permite posicionamento relativo ao contêiner */
+  text-align: center;
+  /* Alinha texto no centro horizontalmente */
+  line-height: 50px;
+  /* Centraliza verticalmente */
+  background: transparent;
+  /* Fundo branco */
+  border-radius: 50%;
+  /* Botões redondos */
+  transform: translateY(-50%);
+  /* Ajusta o posicionamento vertical */
+  transition: transform 0.1s linear;
+  /* Transição suave ao pressionar */
+  z-index: 10;
+}
+
+/* Reduz o botão levemente ao clicar */
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+/* Posiciona o botão esquerdo à esquerda */
+.wrapper i:first-child {
+  left: -80px;
+
+}
+
+/* Posiciona o botão direito à direita */
+.wrapper i:last-child {
+  right: -80px;
+
+}
+
+/* Define o layout do carrossel como uma grade horizontal */
+.wrapper .carousel_ex {
+  display: grid;
+  grid-auto-flow: column;
+  /* Define o fluxo das colunas */
+  grid-auto-columns: calc((100% / 4));
+  /* Define a largura de cada coluna */
+  overflow-x: auto;
+  /* Permite rolagem horizontal */
+  scroll-snap-type: x mandatory;
+  /* Alinhamento suave ao rolar */
+  gap: 10px;
+  /* Espaço entre os itens */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  scroll-behavior: smooth;
+  /* Rolagem suave */
+  scrollbar-width: none;
+  /* Remove a barra de rolagem no Firefox */
+  box-shadow: none;
+}
+
+/* Remove a barra de rolagem no Chrome */
+.carousel_ex::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove a transição de rolagem */
+.carousel_ex.no-transition {
+  scroll-behavior: auto;
+}
+
+/* Ajusta o comportamento do carrossel enquanto arrastando */
+.carousel_ex.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+/* Altera o cursor e impede a seleção de texto enquanto arrastando */
+.carousel_ex.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+/* Centraliza os elementos dentro do carrossel */
+.carousel_ex :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estiliza os cartões do carrossel */
+.carousel_ex .card {
+  scroll-snap-align: start;
+  /* Garante que cada cartão fique alinhado ao início */
+  height: 342px;
+  /* Altura dos cartões */
+  list-style: none;
+  /* Remove os marcadores de lista */
+  background-color: transparent;
+  cursor: pointer;
+  /* Define o cursor como pointer */
+  flex-direction: column;
+  /* Coloca os elementos verticalmente */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  border: none;
+  /* Remove a borda */
+}
+
+/* Define a área da imagem dentro do cartão */
+.card .img {
+  position: relative;
+  /* Permite posicionamento dos elementos internos */
+  width: 90%;
+  /* Largura relativa */
+  height: auto;
+  /* Altura ajustada automaticamente */
+}
+
+/* Estiliza a imagem normal (padrão) */
+.card .img img.normal-img {
+  width: 100%;
+  /* Largura total */
+  height: auto;
+  /* Altura proporcional */
+  object-fit: cover;
+  /* Ajusta a imagem para cobrir o espaço */
+  transition: opacity 0.5s ease-in-out;
+  /* Transição suave de opacidade */
+}
+
+/* Estiliza a imagem ao passar o mouse */
+.card .img img.hover-img {
+  position: absolute;
+  /* Sobrepõe a imagem normal */
+  top: 0;
+  /* Alinha ao topo */
+  left: 0;
+  /* Alinha à esquerda */
+  width: 100%;
+  /* Largura total */
+  height: auto;
+  /* Altura proporcional */
+  object-fit: cover;
+  /* Ajusta para cobrir o espaço */
+  opacity: 0;
+  /* Torna a imagem invisível por padrão */
+  transform: scale(1);
+  /* Sem escala inicial */
+  transition: opacity 0.5s ease-in-out transform 0.3s ease-in-out;
+  /* Transições suaves */
+}
+
+/* Oculta a imagem normal ao passar o mouse */
+.card .img:hover img.normal-img {
+  opacity: 0;
+}
+
+/* Mostra a imagem de hover ao passar o mouse */
+.card .img:hover img.hover-img {
+  opacity: 1;
+  /* Torna visível */
+  transform: scale(1.1);
+  /* Aumenta levemente a escala */
+}
+
+/* Estiliza o título dentro dos cartões */
+.carousel_ex .card h2 {
+  font-weight: 500;
+  /* Peso médio da fonte */
+  font-size: 1.56rem;
+  /* Tamanho da fonte */
+  margin: 30px 0 5px;
+  /* Margens superior e inferior */
+}
+
+/* Estiliza o subtítulo dentro dos cartões */
+.carousel_ex .card span {
+  color: #6A6D78;
+  /* Cor do texto */
+  font-size: 1.31rem;
+  /* Tamanho da fonte */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  /* Centraliza o botão horizontalmente */
+  margin-top: 20px;
+  /* Adiciona espaço acima */
+  width: 100%;
+  /* Garante que ocupe toda a largura */
+}
+
+.titulocarrossel {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+  color: #881c56;
+}
+
+.subtituloexames {
+  font-size: 20px;
+  color: #638595;
+}
+
+.linhacarrossel {
+  margin: 0 auto;
+  border: 2px solid #638595;
+  /* Cor da borda */
+  max-width: 50%;
+  align-items: center;
+}
+
+.linhacarrossel hr {
+  display: none;
+}
+
+/* Ajustes de layout para telas menores que 900px */
+@media screen and (max-width: 900px) {
+  .wrapper .carousel_ex {
+    grid-auto-columns: calc((100% / 2) + 9px);
+    /* Reduz a largura das colunas */
+  }
+}
+
+/* Ajustes de layout para telas menores que 600px */
+@media screen and (max-width: 600px) {
+  .wrapper .carousel_ex {
+    grid-auto-columns: calc((100% / 2) + 15px);
+    /* Reduz a largura das colunas */
+  }
+}
+
+@media (max-width: 768px) {
+  .titulocarrossel {
+    font-size: 30px;
+  }
+
+  .subtituloexames {
+    display: none;
+  }
+}
+
+/* carrossel de  galeria */
+/* Remove margens e preenchimentos padrão, e ajusta o box-sizing para incluir bordas e preenchimentos no tamanho total */
+
+.carrossel_galeria {
+  display: flex;
+  padding: 0 px;
+  align-items: center;
+  justify-content: center;
+  min-height: 375px;
+  background-color: #638595;
+}
+
+.galeria {
+  height: 375px;
+  max-width: 100%;
+  /* Define a largura máxima */
+  width: 100%;
+  /* Preenche a largura total */
+  position: relative;
+  /* Permite posicionamento absoluto dos filhos */
+  display: flex;
+  /* Define layout flexível */
+  box-shadow: none;
+  align-items: center;
+}
+
+.galeria i {
+  display: none;
+}
+
+/* Define o layout do carrossel como uma grade horizontal */
+.galeria .carousel_gl {
+  display: grid;
+  grid-auto-flow: column;
+  /* Define o fluxo das colunas */
+  grid-auto-columns: calc((100vw / 5));
+  /* Define a largura de cada coluna */
+  overflow-x: auto;
+  /* Permite rolagem horizontal */
+  scroll-snap-type: x mandatory;
+  /* Alinhamento suave ao rolar */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  scroll-behavior: smooth;
+  /* Rolagem suave */
+  scrollbar-width: none;
+  /* Remove a barra de rolagem no Firefox */
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Remove a barra de rolagem no Chrome */
+.carousel_gl::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove a transição de rolagem */
+.carousel_gl.no-transition {
+  scroll-behavior: auto;
+}
+
+/* Ajusta o comportamento do carrossel enquanto arrastando */
+.carousel_gl.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+/* Altera o cursor e impede a seleção de texto enquanto arrastando */
+.carousel_gl.dragging .cards {
+  cursor: grab;
+  user-select: none;
+}
+
+/* Centraliza os elementos dentro do carrossel */
+.carousel_gl :where(.cards, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estiliza os cartões do carrossel */
+.carousel_gl .cards {
+  scroll-snap-align: start;
+  /* Garante que cada cartão fique alinhado ao início */
+  height: 342px;
+  /* Altura dos cartões */
+  list-style: none;
+  /* Remove os marcadores de lista */
+  background: transparent;
+  /* Fundo branco */
+  cursor: pointer;
+  /* Define o cursor como pointer */
+  padding-bottom: 15px;
+  /* Espaço inferior */
+  flex-direction: column;
+  /* Coloca os elementos verticalmente */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  border: none;
+  /* Remove a borda */
+}
+
+/* Define a área da imagem dentro do cartão */
+.cards .img {
+  position: relative;
+  /* Permite posicionamento dos elementos internos */
+  width: 100%;
+  /* Largura relativa */
+  height: auto;
+  /* Altura ajustada automaticamente */
+}
+
+/* Estiliza a imagem normal (padrão) */
+.cards .img img.normal-img {
+  width: 100%;
+  /* Largura total */
+  height: auto;
+  /* Altura proporcional */
+  object-fit: cover;
+  /* Ajusta a imagem para cobrir o espaço */
+  transition: opacity 0.5s ease-in-out;
+  /* Transição suave de opacidade */
+}
+
+/* Ajustes de layout para telas menores que 900px */
+@media screen and (max-width: 900px) {
+  .galeria .carousel_gl {
+    grid-auto-columns: calc((100% / 2) + 9px);
+    /* Reduz a largura das colunas */
+  }
+}
+
+/* Ajustes de layout para telas menores que 600px */
+@media screen and (max-width: 600px) {
+  .galeria .carousel_gl {
+    grid-auto-columns: calc((100% / 2) + 15px);
+    /* Reduz a largura das colunas */
+  }
+}
+
+/* termos de uso */
+.termosdeuso .container {
+  padding: 20px;
+}
+
+/* Títulos */
+.termosdeuso h1 {
+  color: #881c56;
+  font-weight: 700;
+}
+
+.termosdeuso h2 {
+  color: #658795;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Links e Botões */
+.termosdeuso .btn-primary {
+  background-color: #881c56;
+  border: none;
+}
+
+.termosdeuso .btn-primary:hover {
+  background-color: #881c56;
+  /* Cor de fundo ao passar o mouse */
+  color: #fff;
+  /* Garante que o texto permaneça branco */
+  transform: translateY(-2px);
+  /* Faz o botão "subir" */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra ao botão */
+  transition: 0.3s ease;
+}
+
+/* Linha decorativa */
+.termosdeuso .linha hr {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Lista */
+.termosdeuso ul {
+  padding-left: 20px;
+}
+
+.termosdeuso ul li {
+  margin-bottom: 10px;
+  color: #658795;
+}
+.termosdeuso p {
+  color: #658795;
+}
+
+
+
+
+.politica-privacidade .container {
+  padding: 20px;
+}
+
+/* Títulos */
+.politica-privacidade h1 {
+  color: #881c56;
+  font-weight: 700;
+}
+
+.politica-privacidade h2 {
+  color: #658795;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.politica-privacidade h3 {
+  color: #658795;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+/* Links e Botões */
+.btn-primary {
+  background-color: #881c56;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #881c56;
+  /* Cor de fundo ao passar o mouse */
+  color: #fff;
+  /* Garante que o texto permaneça branco */
+  transform: translateY(-2px);
+  /* Faz o botão "subir" */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra ao botão */
+  transition: 0.3s ease;
+}
+
+/* Linha decorativa */
+.politica-privacidade .linha hr {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Lista */
+.politica-privacidade ul {
+  padding-left: 20px;
+}
+
+.politica-privacidade ul li {
+  margin-bottom: 10px;
+  color: #658795;
+}
+.politica-privacidade p{
+  color: #658795;
+}
+
+
+/* janela de aviso de envio de e-mail */
+/* Estilos da Modal */
+/* Estilos da Modal */
+.modal {
+  display: none;
+  /* Inicialmente oculta */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fundo semi-transparente */
+  justify-content: center;
+  /* Alinha o conteúdo no centro */
+  align-items: center;
+  transition: all 0.3s ease;
+  /* Transição suave */
+}
+
+/* Estilo da janela modal */
+.modal-content {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  /* Largura do modal */
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do botão de fechar */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+/* Estilo da mensagem */
+.modal-content p {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.bloco {
+  display: flex; /* Deixa os blocos lado a lado */
+  gap: 30px; /* Espaçamento entre os blocos */
+  align-items: flex-start; /* Alinha os blocos no topo */
+}
+
+.bloco > div {
+  display: flex;
+  flex-direction: column; /* Mantém título e texto empilhados */
+  gap: 5px; /* Espaçamento entre o título e o texto */
+}
+
+.titulo_examess {
+  font-size: 36px;
+  font-weight: bolder;
+  color: #881c56; /* Azul escuro */
+  margin-bottom: 0px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.texto11 {
+  font-size: 22px;
+  color: #658795;
+  text-align: left;
+  font-weight: bold;
+  display: flex; /* Alinha o ícone e o texto */
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+
