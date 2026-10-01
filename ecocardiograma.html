@@ -1,91 +1,426 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/cookie-consent.css">
-    <link rel="icon" href="./img/icone.png" type="image/x-icon">
-    <title>Ecocardiograma</title>
-</head>
-<body>
-    <div id="menu-container"></div>
-
-    <img src="./imgexames/eco/capa-ecocardio.png" class="img-fluid d-block w-100 d-none d-sm-block">
-    <img src="./imgexames/eco/capa-ecocardio responsivo.png" class="img-fluid d-block w-100 d-sm-none">
-
-    <div class="grid_exames container text-center col-8 ">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col">
-                <div class="titulo_exames">
-                    <strong>ecocardiograma</strong>
-                </div>
-                <br />
-                <div class="texto1">
-                    O ecocardiograma é um exame fundamental para avaliar a saúde do coração, utilizando ondas sonoras
-                    para criar imagens detalhadas do órgão e suas estruturas internas. Este exame permite a análise do
-                    funcionamento do coração, incluindo suas válvulas, câmaras e o fluxo sanguíneo, ajudando no
-                    diagnóstico de diversas condições cardíacas, como insuficiência cardíaca, doenças valvulares e
-                    anomalias congênitas.
-                </div> <br class="d-sm-none">
-            </div>
-            <div class="col">
-                <img class="imgsite img-fluid d-block w-100 d-none d-sm-block" src="./imgexames/eco/1920x1080px/eco-04.png">
-                <img class="imgsite img-fluid d-block w-100 d-sm-none" src="./imgexames/eco/1080x1080px/eco-04.png">
-            </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Ecocardiograma | Med&amp;Imagem
+    </title>
+    <meta name="description" content="Ecocardiograma na Med&amp;Imagem, em São Sebastião do Paraíso, MG. Conheça o exame, sua duração e fale com a equipe para agendar.">
+    <link rel="canonical" href="https://www.medimagem.med.br/ecocardiograma.html">
+    <link rel="icon" href="img/icone.png" type="image/png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="JS/theme.js">
+    </script>
+    <link rel="preload" href="fonts/quicksand-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="JS/script.js" defer>
+    </script>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Med&amp;Imagem">
+    <meta property="og:title" content="Ecocardiograma | Med&amp;Imagem">
+    <meta property="og:description" content="Ecocardiograma na Med&amp;Imagem, em São Sebastião do Paraíso, MG. Conheça o exame, sua duração e fale com a equipe para agendar.">
+    <meta property="og:url" content="https://www.medimagem.med.br/ecocardiograma.html">
+    <meta property="og:image" content="https://www.medimagem.med.br/img/optimized/ecocardiograma-1200.jpg">
+    <meta property="og:image:alt" content="Med&amp;Imagem — Centro de Diagnóstico Médico">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">
+      Pular para o conteúdo
+    </a>
+    <!-- início: menu compartilhado -->
+    <div class="topbar">
+      <div class="container">
+        <span>
+          São Sebastião do Paraíso · MG
+        </span>
+        <span class="topbar-hours">
+          Segunda a sexta, das 6h30 às 18h
+          <span aria-hidden="true">
+            &nbsp; | &nbsp;
+          </span>
+          <a href="tel:+553535315710">
+            Recepção: (35) 3531-5710
+          </a>
+        </span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Med&Imagem, início">
+          <img class="" src="img/logo_medimagem.png" width="475" height="100" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+        </a>
+        <nav id="main-navigation" class="main-nav" aria-label="Navegação principal">
+          <a href="index.html">
+            Início
+          </a>
+          <a href="index.html#clinica">
+            A clínica
+          </a>
+          <a href="index.html#exames">
+            Exames
+          </a>
+          <a href="faleConosco.html">
+            Contato
+          </a>
+          <a class="nav-results" href="index.html#destino">
+            Resultados de exames
+          </a>
+          <a class="button" href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
+            Agendar exame
+          </a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Tema escuro" aria-pressed="false" title="Ativar tema escuro" hidden>
+            <svg class="icon theme-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M21 13a9 9 0 0 1-10-10 9 9 0 1 0 10 10Z"/>
+            </svg>
+            <svg class="icon theme-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1"/>
+            </svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <span data-menu-label>
+              Menu
+            </span>
+          </button>
         </div>
-    </div>
-    <div class="grid_exames container text-center col-8">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col">
-                <img class="imgsite img-fluid d-block w-100 d-none d-sm-block" src="./imgexames/eco/1920x1080px/eco-03.png">
+      </div>
+    </header>
+    <!-- fim: menu compartilhado -->
+    <main id="conteudo" tabindex="-1">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Caminho da página">
+          <ol>
+            <li>
+              <a href="index.html">
+                Início
+              </a>
+            </li>
+            <li>
+              <a href="index.html#exames">
+                Exames
+              </a>
+            </li>
+            <li aria-current="page">
+              Ecocardiograma
+            </li>
+          </ol>
+        </nav>
+        <section class="exam-hero">
+          <div>
+            <span class="eyebrow">
+              Nossos exames
+            </span>
+            <h1>
+              Ecocardiograma
+            </h1>
+            <p>
+              O ecocardiograma é um exame fundamental para avaliar a saúde do coração, utilizando ondas sonoras para criar imagens detalhadas do órgão e suas estruturas internas. Este exame permite a análise do funcionamento do coração, incluindo suas válvulas, câmaras e o fluxo sanguíneo, ajudando no diagnóstico de diversas condições cardíacas, como insuficiência cardíaca, doenças valvulares e anomalias congênitas.
+            </p>
+            <div class="actions">
+              <a class="button " href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
+                Agendar exame
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 4h6v6m0-6L10 14M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
+                </svg>
+              </a>
             </div>
-            <div class="col">
-                <div class="texto1">
-                    Os benefícios do ecocardiograma incluem a capacidade de detectar precocemente problemas cardíacos, fornecer informações valiosas sobre o estado do coração e permitir o monitoramento de condições ao longo do tempo. <br />
-                    O exame é não invasivo, seguro e não utiliza radiação, proporcionando um diagnóstico preciso sem riscos para o paciente.
-
-                </div>
-            </div>
+          </div>
+          <img src="img/optimized/ecocardiograma-1200.jpg" srcset="img/optimized/ecocardiograma-640.jpg 640w, img/optimized/ecocardiograma-1200.jpg 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1264px) 46vw, 570px" width="1200" height="675" alt="Realização de um ecocardiograma" fetchpriority="high" decoding="async">
+        </section>
+      </div>
+      <section class="section section-tint">
+        <div class="container exam-body">
+          <div class="prose">
+            <section>
+              <h2>
+                Sobre o exame
+              </h2>
+              <p>
+                Os benefícios do ecocardiograma incluem a capacidade de detectar precocemente problemas cardíacos, fornecer informações valiosas sobre o estado do coração e permitir o monitoramento de condições ao longo do tempo.
+              </p>
+              <p>
+                O exame é não invasivo, seguro e não utiliza radiação, proporcionando um diagnóstico preciso sem riscos para o paciente.
+              </p>
+            </section>
+            <section>
+              <h2>
+                Seu exame na Med&amp;Imagem
+              </h2>
+              <p>
+                Na Med&Imagem, realizamos o ecocardiograma com tecnologia de ponta, garantindo imagens de alta qualidade para resultados confiáveis.
+              </p>
+              <p>
+                Nossa equipe de profissionais qualificados assegura um atendimento atencioso e humanizado, com foco na saúde e conforto do paciente durante todo o exame.
+              </p>
+            </section>
+          </div>
+          <aside class="exam-aside" aria-labelledby="duracao">
+            <span class="eyebrow">
+              Para se organizar
+            </span>
+            <h2 id="duracao">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+              Duração do exame
+            </h2>
+            <p>
+              De 20 a 30 minutos.
+            </p>
+            <a class="button " href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
+              Agendar exame
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M14 4h6v6m0-6L10 14M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
+              </svg>
+            </a>
+            <a class="text-link" href="faleConosco.html">
+              Fale com nossa equipe
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h14m-6-6 6 6-6 6"/>
+              </svg>
+            </a>
+          </aside>
         </div>
-    </div>
-    <div class="grid_exames container text-center col-8">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col">
-                <img class="imgsite img-fluid d-block w-100 d-sm-none" src="./imgexames/eco/1080x1080px/co-03.png"> <br
-                    class="d-sm-none">
-                <div class="texto1">
-                    Na Med&Imagem, realizamos o ecocardiograma com tecnologia de ponta, garantindo imagens de alta qualidade para resultados confiáveis. <br>
-                    Nossa equipe de profissionais qualificados assegura um atendimento atencioso e humanizado, com foco na saúde e conforto do paciente durante todo o exame.
-
-                </div> <br> <br>
-                <div class="titulo_exames">
-                    <strong>duração do exame</strong>
-                </div>
-                <div class="texto1">
-                    Entre 20 a 30 minutos.
-                </div>
-                <button type="button" onclick="whatsapp()" class="agendarexame btn btn-primary">agendar exames</button>
+      </section>
+      <section class="section section-tint">
+        <div class="container">
+          <span class="eyebrow">
+            Continue por aqui
+          </span>
+          <h2>
+            Conheça outros exames
+          </h2>
+          <ul class="related-list">
+            <li>
+              <a href="ressonancia_magnetica.html">
+                Ressonância magnética
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="tomografia.html">
+                Tomografia computadorizada
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="ultrassonografia.html">
+                Ultrassonografia
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mamografiaDigital.html">
+                Mamografia digital
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="densitometria_ossea.html">
+                Densitometria óssea
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="radiografia.html">
+                Radiografia digital
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="laboratorio.html">
+                Exames laboratoriais
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="eletrocardiograma.html">
+                Eletrocardiograma
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="holter.html">
+                Holter 24 horas
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mapa.html">
+                M.A.P.A. 24 horas
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="teste_ergometrico.html">
+                Teste ergométrico
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="puncao_biopsia.html">
+                Punção biópsia
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- início: rodapé compartilhado -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" aria-label="Med&Imagem, início">
+              <img class="" src="img/logo_medimagem.png" width="475" height="100" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+            </a>
+            <p>
+              Mais que diagnosticar. Cuidar.
+            </p>
+          </div>
+          <div>
+            <h2>
+              Med&amp;Imagem
+            </h2>
+            <ul>
+              <li>
+                <a href="index.html">
+                  Início
+                </a>
+              </li>
+              <li>
+                <a href="index.html#clinica">
+                  A clínica
+                </a>
+              </li>
+              <li>
+                <a href="index.html#exames">
+                  Nossos exames
+                </a>
+              </li>
+              <li>
+                <a href="index.html#destino">
+                  Resultados de exames
+                </a>
+              </li>
+              <li>
+                <a href="faleConosco.html">
+                  Fale conosco
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>
+              Fale com a nossa equipe
+            </h2>
+            <ul>
+              <li>
+                <a href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
+                  Agendamento: (35) 99722-6479
+                </a>
+              </li>
+              <li>
+                <a href="tel:+553535315710">
+                  Recepção: (35) 3531-5710
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/5535999212077" target="_blank" rel="noopener noreferrer">
+                  Ouvidoria: (35) 99921-2077
+                </a>
+              </li>
+              <li>
+                <a href="mailto:recepcao@medimagem.med.br">
+                  recepcao@medimagem.med.br
+                </a>
+              </li>
+              <li>
+                <a href="mailto:ouvidoria@medimagem.med.br">
+                  ouvidoria@medimagem.med.br
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>
+              Venha nos visitar
+            </h2>
+            <address>
+              Rua São Miguel, 300 · Mocoquinha
+              <br>
+              São Sebastião do Paraíso · MG
+            </address>
+            <p>
+              Segunda a sexta, das 6h30 às 18h
+            </p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/medimagemssp/" target="_blank" rel="noopener noreferrer">
+                Instagram ↗
+              </a>
+              <a href="https://www.facebook.com/medimagemssparaiso" target="_blank" rel="noopener noreferrer">
+                Facebook ↗
+              </a>
             </div>
-            <div class="col">
-                <img class="imgsite img-fluid d-block w-100 d-none d-sm-block" src="./imgexames/eco/1920x1080px/eco-01.png">
-            </div>
-        </div> <br> <br>
-    </div>
-
-    <div class="linha">
-        <hr />
-    </div>
-
-    <div id="carrossel"></div>
-    <div id="footer"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./JS/script.js"></script>
-    <script src="./JS/cookie-consent.js" defer></script>
-</body>
-
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>
+            Med&amp;Imagem · Centro de Diagnóstico Médico
+          </span>
+          <div class="footer-legal">
+            <a href="termosdeuso.html">
+              Termos de uso
+            </a>
+            <a href="politicadeprivacidade.html">
+              Política de privacidade
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- fim: rodapé compartilhado -->
+    <a class="whatsapp-dock" href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer" aria-label="Agendar exame pelo WhatsApp (abre em nova aba)">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M21 11.5A9 9 0 0 1 8 20L3 21l1-5a9 9 0 1 1 17-4.5Z"/>
+        <path d="M8 7c0 5 4 9 8 9l1-3-3-1-1 1-2-2 1-1-1-3Z"/>
+      </svg>
+      <span>
+        Agendar pelo WhatsApp
+      </span>
+    </a>
+  </body>
 </html>

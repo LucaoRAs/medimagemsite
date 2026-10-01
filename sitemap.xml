@@ -1,46 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://www.medimagem.med.br/</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://www.medimagem.med.br/ressonancia_magnetica.html</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.medimagem.med.br/mamografiaDigital.html</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.medimagem.med.br/laboratorio.html</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.medimagem.med.br/faleConosco.html</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.medimagem.med.br/index.html#destino</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <url><loc>https://www.medimagem.med.br/</loc></url>
+  <url><loc>https://www.medimagem.med.br/ressonancia_magnetica.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/tomografia.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/ultrassonografia.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/mamografiaDigital.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/densitometria_ossea.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/radiografia.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/laboratorio.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/ecocardiograma.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/eletrocardiograma.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/holter.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/mapa.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/teste_ergometrico.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/puncao_biopsia.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/faleConosco.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/termosdeuso.html</loc></url>
+  <url><loc>https://www.medimagem.med.br/politicadeprivacidade.html</loc></url>
 </urlset>
