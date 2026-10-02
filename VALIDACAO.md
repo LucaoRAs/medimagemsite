@@ -1,5 +1,30 @@
 # Registro da reformulação — Med&Imagem
 
+## Correção da retomada automática do carrossel
+
+Validação no Chrome, abrindo `index.html` diretamente: 10 verificações aprovadas com esperas reais, cobrindo autoplay, retomada após clique nas setas, hover, pausa explícita e foco por teclado, com e sem redução de animações. Relatório local: `.preview/autoplay-fix-validation.json`.
+
+Após o relato de que os banners não avançavam sozinhos, a pausa permanente causada por cliques/foco foi substituída por reinício do intervalo de seis segundos. Hover e foco por teclado pausam enquanto presentes; a reprodução retoma ao sair. Somente o botão Pausar mantém a interrupção até um comando explícito de Reproduzir. A preferência `prefers-reduced-motion` atua apenas nos efeitos visuais do CSS, sem bloquear o autoplay nem ocultar seu botão. Esta correção substitui as observações anteriores sobre pausa permanente após interação e bloqueio por redução de movimento.
+
+## Atualização do carrossel e da parte jurídica — 1 de outubro de 2026
+
+Escopo desta etapa: carrossel da home, consentimento, páginas jurídicas e integração no rodapé. Comparação com Git confirmou que o conteúdo principal das outras 14 páginas e todas as demais seções da home permaneceram intactos. As cinco artes e suas variantes originais foram preservadas.
+
+- Validador estático: **19 documentos e 76 recursos locais, zero falhas**. URLs jurídicas antigas mantêm cópias dos novos textos e canonical atualizado; sitemap com 17 URLs canônicas.
+- Chrome headless: **218 verificações aprovadas**, sem erros JavaScript ou chamadas automáticas a terceiros. Relatório local em `.preview/feature-validation.json`.
+- Carrossel: cinco slides em 320, 390, 700, 768 e 1440 px, temas claro e escuro; sem overflow horizontal, sobreposição de CTA pelos controles ou alteração da altura na troca. Capturas inspecionadas em desktop e celular.
+- Autoplay de seis segundos observado com espera real; pausa no hover, retomada ao sair, pausa após interação, navegação circular, setas/Home/End e swipe por eventos reais de toque via Chromium DevTools. Preferência de redução de animações respeitada, sem mensagem visível; navegação manual continua disponível.
+- Carregamento: apenas a imagem do primeiro banner solicitada inicialmente, confirmado em 320, 390, 768 e 1440 px. Os demais carregam ao navegar; altura permanece estável.
+- Cookies: escolhas `accepted`, `rejected` e `custom`; categorias independentes; persistência entre páginas/recargas; revogação sincronizada entre abas; fechamento sem salvar; Escape, retorno e contenção de foco; armazenamento bloqueado e registros inválidos. Nenhum script de analytics/marketing foi adicionado.
+- Novas páginas jurídicas verificadas em 320, 390, 768 e 1440 px, nos dois temas. Textos baseados nos fluxos observáveis do site, com referências à LGPD e ao guia da ANPD na política.
+- Sem JavaScript: primeira campanha, conteúdo e links jurídicos continuam acessíveis; o botão do modal fica oculto.
+
+Não houve publicação. Testes locais em Chromium não substituem avaliação em dispositivos físicos ou medição de Core Web Vitals em produção. Logs da hospedagem e processos internos dos serviços externos não são verificáveis neste repositório.
+
+## Histórico da reformulação anterior
+
+O registro abaixo descreve a etapa anterior. As observações antigas sobre ausência de consentimento e preservação dos textos jurídicos foram substituídas pela atualização acima.
+
 Validação local em 1 de outubro de 2026, com servidor HTTP estático e Microsoft Edge (Chromium) em modo headless. Não houve publicação, alteração de DNS, login nos portais ou envio de mensagens.
 
 ## Escopo entregue

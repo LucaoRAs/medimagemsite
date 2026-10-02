@@ -1,6 +1,6 @@
 # Med&Imagem — site institucional
 
-Site em **HTML5, CSS3 e JavaScript puro**, pronto para upload na Hostinger. Não precisa de npm, build, banco de dados ou servidor de aplicação. As 17 páginas contêm cabeçalho, navegação, conteúdo e rodapé no próprio HTML; continuam utilizáveis sem JavaScript.
+Site em **HTML5, CSS3 e JavaScript puro**, pronto para upload na Hostinger. Não precisa de npm, build, banco de dados ou servidor de aplicação. As 17 páginas canônicas e as duas URLs jurídicas antigas contêm cabeçalho, navegação, conteúdo e rodapé no próprio HTML; continuam utilizáveis sem JavaScript.
 
 ## Visualizar
 
@@ -23,20 +23,21 @@ Acesse **http://127.0.0.1:8765/**. Esses comandos são apenas ferramentas locais
 - **Página inicial:** `index.html`, com o carrossel principal dos cinco banners originais, os 13 exames, clínica, resultados, estrutura e contatos.
 - **Exames:** cada arquivo HTML mantém sua URL original, inclusive `mamografiaDigital.html`.
 - **Contato:** `faleConosco.html`, com agendamento, recepção e ouvidoria separados. WhatsApp, telefone e e-mail são links diretos; não existe envio de formulário nem chamada à antiga API.
-- **Termos e privacidade:** `termosdeuso.html` e `politicadeprivacidade.html`. O conteúdo substantivo original foi preservado.
+- **Termos e privacidade:** `termos-de-uso.html` e `politica-de-privacidade.html`, com textos baseados nos recursos efetivamente presentes no projeto. `termosdeuso.html` e `politicadeprivacidade.html` mantêm cópias atualizadas, com canonical apontando para os novos endereços. Ao editar o texto jurídico, mantenha as duas versões sincronizadas.
 - **Identidade e componentes:** `style/style.css`. As variáveis em `:root` centralizam vinho `#881C56`, azul `#658795`, variante `#638595`, fundos, bordas e espaçamentos. Quicksand local, pesos 400–700; licença em `fonts/OFL.txt`.
 - **Interações:** `JS/script.js`, com menu mobile, busca que ignora acentos e maiúsculas e entradas visuais discretas. A busca aparece somente quando o JavaScript está disponível.
-- **Carrossel de banners:** `JS/banner-carousel.js`. Mantém as cinco campanhas originais, indicadores, setas, swipe e autoplay de oito segundos. Hover pausa temporariamente; foco e interação param a rotação até o visitante escolher Reproduzir. A rotação para fora da tela, em aba oculta e com `prefers-reduced-motion`. As imagens não são recortadas; legendas e ações também estão disponíveis em HTML. As cópias otimizadas `img/optimized/banner-*` preservam as artes originais e têm versões próprias para celular e desktop.
+- **Carrossel de banners:** `JS/banner-carousel.js`. Mantém as cinco campanhas originais, contador, controles circulares, swipe e autoplay de seis segundos. Hover e foco por teclado pausam enquanto o visitante está no componente; cliques e swipe reiniciam o intervalo, sem deixar a reprodução parada permanentemente. Apenas o botão Pausar mantém a pausa até escolher Reproduzir. Setas do teclado, Home e End permitem navegar. A rotação para fora da tela e em aba oculta. `prefers-reduced-motion` remove os efeitos visuais pelo CSS, sem bloquear a troca automática ou ocultar o controle de pausa. A base da legenda integra o CTA e os controles sem divisórias. As imagens não são recortadas; as cópias otimizadas `img/optimized/banner-*` têm versões próprias para celular e desktop. O primeiro banner tem prioridade de carregamento; os demais mantêm lazy loading e decodificação antes da troca. A altura considera a maior legenda para evitar saltos entre slides.
+- **Consentimento:** `JS/cookie-consent.js` e `style/cookie-consent.css`, incluídos em todas as páginas. Card flutuante com aceitar, recusar e preferências; modal nativo com Escape, foco contido e retorno ao acionador. O botão no rodapé reabre as categorias. Sem JavaScript, os links jurídicos continuam disponíveis e o botão do modal permanece oculto.
 - **Tema claro/escuro:** `JS/theme.js`, carregado no head antes do CSS para aplicar a preferência antes da primeira pintura. O botão no cabeçalho salva apenas `medimagem-theme` em `localStorage`. Na primeira visita, o site acompanha `prefers-color-scheme`; após a escolha, mantém a preferência entre páginas e recargas. Se o armazenamento for bloqueado, a troca funciona durante a visita. As cores dos dois temas estão no início de `style/style.css`; a marca e as fotografias mantêm suas cores originais.
 - **Fotos:** os originais em `img`, `images` e `imgexames` foram preservados. `img/optimized` contém cópias JPEG em dois tamanhos, usadas por `srcset`; não sobrescreva a marca oficial ao editar fotos.
 
 `menu.html`, `footer.html`, `whatsapp-button.html`, `carrossel_exames.html` e `carrossel_galeria.html` são fragmentos HTML de referência, sem documentos ou scripts aninhados. **Não são buscados em tempo de execução.** Ao alterar cabeçalho ou rodapé, replique o conteúdo entre os comentários `início/fim: menu compartilhado` e `início/fim: rodapé compartilhado` em todas as páginas. Preserve o `aria-current="page"` do link correspondente. Ao alterar os serviços ou a galeria, atualize também os fragmentos de referência.
 
-Os arquivos antigos de JS/CSS dos carrosséis de **exames e galeria**, além do aviso antigo de cookies, permanecem como registros de compatibilidade, sem execução nas páginas. O carrossel principal usa `JS/banner-carousel.js`. Nenhuma biblioteca externa é necessária.
+Os arquivos antigos de JS/CSS dos carrosséis de **exames e galeria** permanecem como registros de compatibilidade, sem execução nas páginas. O carrossel principal usa `JS/banner-carousel.js`; o componente de cookies usa `JS/cookie-consent.js`. Nenhuma biblioteca externa é necessária.
 
 ## Publicar na Hostinger
 
-O pacote local **`.preview/medimagem-hostinger.zip`** contém os arquivos necessários para publicação, com `index.html` na raiz e sem ferramentas, logs ou histórico Git. As imagens originais continuam no repositório; o pacote usa as cópias otimizadas referenciadas pelo site. Você pode enviar esse ZIP para `public_html` e extrair seu conteúdo ali, após fazer backup do site atual.
+Para publicar esta atualização, utilize os arquivos atuais do projeto seguindo os passos abaixo. Nenhum ZIP de publicação foi gerado nesta etapa; um pacote de uma versão anterior não contém o novo carrossel e as funcionalidades jurídicas.
 
 1. Faça uma cópia de segurança dos arquivos atualmente em `public_html`.
 2. Envie os arquivos HTML da raiz, `sitemap.xml` e as pastas `style`, `JS`, `fonts`, `img`, `images` e `imgexames` para `public_html` pelo gerenciador de arquivos ou FTP. `index.html` deve ficar diretamente dentro de `public_html`.
@@ -48,11 +49,15 @@ Não envie `.git`, `.preview`, `tools`, `Microsoft`, arquivos de teste ou logs. 
 
 ## Recursos externos e privacidade
 
-A página carrega apenas fonte, imagens, CSS e JavaScript locais. Não incorpora mapa, analytics, pixels ou widgets de redes sociais e não grava cookies. O armazenamento local contém somente a preferência de tema escolhida pelo visitante. O aviso antigo de cookies foi removido; não existe preferência de aceite/rejeição a persistir nesta versão. Os links de mapas, WhatsApp, redes sociais e resultados abrem os serviços externos somente por ação do visitante.
+A página carrega apenas fonte, imagens, CSS e JavaScript locais. Não incorpora mapa, analytics, pixels ou widgets de redes sociais e não grava cookies HTTP. O armazenamento local mantém `medimagem-theme`, `medimagem_cookie_consent` (`accepted`, `rejected` ou `custom`) e `medimagem_cookie_preferences` (categorias, escolha, versão e data). As categorias opcionais começam desligadas. A escolha persiste entre páginas e sincroniza entre abas; registros inválidos exigem nova escolha. Se o navegador bloquear o armazenamento, a decisão funciona apenas na página e essa limitação é informada.
+
+Não existem scripts opcionais para liberar nesta versão. Futuras integrações devem consultar `window.MedimagemConsent.allows('analytics')` ou `allows('marketing')` antes de carregar/coletar e observar o evento `medimagem:consentchange` para interromper a coleta e remover dados opcionais quando houver revogação. `get()` retorna uma cópia do estado. A API, sozinha, não bloqueia scripts arbitrários: cada integração deve implementar esses controles. Novos serviços/finalidades exigem atualizar política, descrição das categorias e versão do consentimento antes da ativação; o aceite atual não autoriza automaticamente um serviço futuro não informado. As preferências não são enviadas ao servidor por este componente.
+
+Os links de mapas, WhatsApp, redes sociais e resultados abrem os serviços externos somente por ação do visitante. A busca de exames filtra conteúdo localmente, sem transmissão ou persistência do termo.
 
 Os portais de paciente e médico preservam exatamente os destinos originais, inclusive protocolo HTTP e porta 8081. O site não autentica usuários nem acessa dados de pacientes. A disponibilidade desses sistemas depende de seus respectivos servidores.
 
-**Revisão editorial pendente da clínica:** a política original descreve cookies, login, dados pessoais, parceiros e certificação. Essas declarações foram preservadas por solicitação; a clínica deve revisar o texto para refletir os fluxos e serviços efetivamente utilizados. A reformulação não verifica certificações e não representa aprovação jurídica. Se forem adicionados recursos opcionais de terceiros, reavalie o consentimento antes de carregá-los.
+Os textos jurídicos descrevem o site institucional e diferenciam os ambientes externos de atendimento e resultados. Não afirmam certificações, ferramentas, prazos de retenção ou processos internos que não possam ser identificados no projeto. A configuração de logs da hospedagem e os processos clínicos externos não são verificáveis pelo código deste site.
 
 ## Validação de desenvolvimento
 

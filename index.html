@@ -14,6 +14,8 @@
     </script>
     <link rel="preload" href="fonts/quicksand-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cookie-consent.css">
+    <script src="JS/cookie-consent.js" defer></script>
     <script src="JS/script.js" defer>
     </script>
     <meta property="og:type" content="website">
@@ -226,41 +228,17 @@
               </figure>
             </div>
             <div class="banner-controls" data-banner-controls hidden>
-              <button class="banner-play" type="button" data-banner-play aria-label="Pausar reprodução automática dos banners">
-                Pausar
-              </button>
-              <div class="banner-dots" role="group" aria-label="Escolher banner">
-                <button type="button" data-banner-to="0" aria-label="Banner 1: Mais que diagnosticar. Cuidar." aria-current="true">
-                  <span>
-                  </span>
+              <span class="banner-count" aria-hidden="true"><strong data-banner-count>01</strong><span>/</span>05</span>
+              <div class="banner-navigation">
+                <button class="banner-play" type="button" data-banner-play aria-label="Pausar reprodução automática dos banners">
+                  <svg class="icon banner-pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+                  <svg class="icon banner-resume-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg>
                 </button>
-                <button type="button" data-banner-to="1" aria-label="Banner 2: Acesse os seus exames online." aria-current="false">
-                  <span>
-                  </span>
-                </button>
-                <button type="button" data-banner-to="2" aria-label="Banner 3: Precisão em cada exame." aria-current="false">
-                  <span>
-                  </span>
-                </button>
-                <button type="button" data-banner-to="3" aria-label="Banner 4: Check-up cardiológico." aria-current="false">
-                  <span>
-                  </span>
-                </button>
-                <button type="button" data-banner-to="4" aria-label="Banner 5: Ultrassonografia de alta precisão." aria-current="false">
-                  <span>
-                  </span>
-                </button>
-              </div>
-              <div class="banner-arrows">
                 <button class="banner-arrow banner-prev" type="button" data-banner-prev aria-label="Banner anterior">
-                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="m9 5 7 7-7 7"/>
-                  </svg>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
                 </button>
                 <button class="banner-arrow" type="button" data-banner-next aria-label="Próximo banner">
-                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="m9 5 7 7-7 7"/>
-                  </svg>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
                 </button>
               </div>
             </div>
@@ -957,12 +935,13 @@
             Med&amp;Imagem · Centro de Diagnóstico Médico
           </span>
           <div class="footer-legal">
-            <a href="termosdeuso.html">
+            <a href="termos-de-uso.html">
               Termos de uso
             </a>
-            <a href="politicadeprivacidade.html">
+            <a href="politica-de-privacidade.html">
               Política de privacidade
             </a>
+            <button class="footer-cookie-preferences" type="button" data-cookie-open hidden>Preferências de Cookies</button>
           </div>
         </div>
       </div>

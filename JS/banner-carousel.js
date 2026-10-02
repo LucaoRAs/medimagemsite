@@ -10,38 +10,42 @@
   const play = carousel.querySelector('[data-banner-play]');
   const dots = Array.from(carousel.querySelectorAll('[data-banner-to]'));
   const status = carousel.querySelector('[data-banner-status]');
+  const count = carousel.querySelector('[data-banner-count]');
   if (slides.length < 2 || !controls || !previous || !next || !play) return;
   carousel.dataset.ready = 'true';
 
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   let index = 0;
   let requested = 0;
-  let userPaused = reduced.matches;
+  let userPaused = false;
   let hovered = false;
+  let keyboardFocused = false;
   let visible = true;
   let timer;
   let requestId = 0;
   let touchStart = null;
-  let playIntent = null;
-  const interval = 8000;
+  const interval = 6000;
 
   function syncPlayback() {
     clearTimeout(timer);
-    const playing = !userPaused && !hovered && visible && !document.hidden && !reduced.matches;
+    const playing = !userPaused && !hovered && !keyboardFocused && visible && !document.hidden;
     carousel.dataset.playing = String(playing);
-    play.disabled = reduced.matches;
-    play.textContent = reduced.matches ? 'Movimento reduzido' : userPaused ? 'Reproduzir' : 'Pausar';
-    play.setAttribute('aria-label', reduced.matches ? 'Reprodução manual: movimento reduzido ativado' : userPaused ? 'Reproduzir banners automaticamente' : 'Pausar reprodução automática dos banners');
+    play.dataset.paused = String(userPaused);
+    const label = userPaused ? 'Reproduzir banners automaticamente' : 'Pausar reprodução automática dos banners';
+    play.setAttribute('aria-label', label);
+    play.title = label;
     if (playing) timer = setTimeout(() => show(index + 1, false), interval);
   }
 
-  function pause() {
-    userPaused = true;
+  function pauseForInteraction() {
+    clearTimeout(timer);
+    // Invalida uma troca automática que ainda esteja decodificando a imagem.
+    ++requestId;
+    // Recomeça o intervalo completo; cliques não deixam uma pausa permanente.
     syncPlayback();
   }
 
   async function show(target, manual = true) {
-    if (manual) pause();
+    if (manual) pauseForInteraction();
     requested = (target + slides.length) % slides.length;
     const desired = requested;
     const id = ++requestId;
@@ -54,6 +58,7 @@
     slides.forEach((slide, i) => { slide.hidden = i !== desired; });
     dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === desired)));
     index = desired;
+    if (count) count.textContent = String(index + 1).padStart(2, '0');
     carousel.dataset.activeSlide = String(index);
     if (manual && status) status.textContent = `Banner ${index + 1} de ${slides.length}: ${slides[index].dataset.bannerTitle}`;
     syncPlayback();
@@ -63,8 +68,9 @@
   next.addEventListener('click', () => show(requested + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
   play.addEventListener('click', () => {
-    userPaused = playIntent === null ? !userPaused : playIntent;
-    playIntent = null;
+    userPaused = !userPaused;
+    keyboardFocused = false;
+    ++requestId;
     syncPlayback();
   });
   carousel.addEventListener('pointerenter', event => {
@@ -77,13 +83,20 @@
     hovered = false;
     syncPlayback();
   });
-  // Foco ou interação interrompem a rotação até uma nova escolha de Reproduzir.
+  // Navegação por teclado pausa enquanto o foco permanece no carrossel.
+  // O foco deixado por um clique não deve impedir a retomada do autoplay.
   carousel.addEventListener('focusin', event => {
-    if (!carousel.contains(event.relatedTarget)) pause();
+    keyboardFocused = event.target.matches(':focus-visible');
+    syncPlayback();
+  });
+  carousel.addEventListener('focusout', event => {
+    if (carousel.contains(event.relatedTarget)) return;
+    keyboardFocused = false;
+    syncPlayback();
   });
   carousel.addEventListener('pointerdown', event => {
-    if (event.target.closest('[data-banner-play]')) playIntent = !userPaused;
-    else pause();
+    keyboardFocused = false;
+    if (!event.target.closest('[data-banner-play]')) pauseForInteraction();
     if (event.pointerType === 'touch') touchStart = { x: event.clientX, y: event.clientY };
   });
   carousel.addEventListener('pointerup', event => {
@@ -95,14 +108,18 @@
   });
   carousel.addEventListener('pointercancel', () => { touchStart = null; });
   carousel.addEventListener('keydown', event => {
-    if (!event.target.closest('[data-banner-controls]')) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
+      keyboardFocused = true;
       show(requested + (event.key === 'ArrowLeft' ? -1 : 1));
+    } else if (event.key === 'Home' || event.key === 'End') {
+      event.preventDefault();
+      keyboardFocused = true;
+      show(event.key === 'Home' ? 0 : slides.length - 1);
     }
   });
   document.addEventListener('visibilitychange', syncPlayback);
-  reduced.addEventListener('change', () => { userPaused = true; syncPlayback(); });
+  // prefers-reduced-motion remove os efeitos pelo CSS, sem bloquear a rotação.
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => {
       visible = entries[0].isIntersecting;

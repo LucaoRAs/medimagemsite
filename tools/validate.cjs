@@ -61,7 +61,9 @@ const patientPortal=Buffer.from('aHR0cDovL21lZGltYWdlbXNzcDMuZGRucy5uZXQ6ODA4MS9
 for(const role of ['Patient','Doctor'])check(homepage.includes(patientPortal.replace('/Patient/','/'+role+'/')),'Destino original do portal '+role);
 check(fs.readFileSync('googlee3ecfa86bc1fbf12.html','utf8').trim()==='google-site-verification: googlee3ecfa86bc1fbf12.html','Verificação Google preservada');
 const sitemap=fs.readFileSync('sitemap.xml','utf8');
-check((sitemap.match(/<loc>/g)||[]).length===pages.length,'Sitemap completo');
+const canonicalUrls = new Set(pages.map(file => fs.readFileSync(file,'utf8').match(/<link rel="canonical" href="([^"]+)"/)[1]));
+check((sitemap.match(/<loc>/g)||[]).length===canonicalUrls.size,'Sitemap completo, sem duplicar URLs antigas');
+for(const url of canonicalUrls)check(sitemap.includes(`<loc>${url}</loc>`),'Canonical ausente do sitemap: '+url);
 check(!sitemap.includes('#'),'Sitemap não deve conter âncoras');
 // Comparação com os originais disponíveis apenas no ambiente de migração.
 const norm=html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
@@ -69,13 +71,13 @@ for(const file of pages){
  const oldPath=path.join('.preview/originals',file);
  if(!fs.existsSync(oldPath))continue;
  const old=fs.readFileSync(oldPath,'utf8'), current=norm(fs.readFileSync(file,'utf8'));
- if(file==='termosdeuso.html'||file==='politicadeprivacidade.html'){
-  const substantive=file==='termosdeuso.html'?old.match(/<div class="content">([\s\S]*?)<\/div>/)[1]:old.match(/<h1[^>]*>[\s\S]*?<\/h1>([\s\S]*?)<\/div>/)[1];
-  check(current.includes(norm(substantive)),file+': conteúdo substantivo integral');
- }else if(!['index.html','faleConosco.html'].includes(file)){
+ if(!['index.html','faleConosco.html','termosdeuso.html','politicadeprivacidade.html'].includes(file)){
   const parts=[...old.matchAll(/<div class="texto1\s*">([\s\S]*?)<\/div>/g)];
   for(const part of parts)check(current.includes(norm(part[1]).replace(/^Entre (\d+) a /,'De $1 a ')),file+': conteúdo de exame preservado');
  }
+}
+for(const [old,current] of [['termosdeuso.html','termos-de-uso.html'],['politicadeprivacidade.html','politica-de-privacidade.html']]){
+ check(fs.readFileSync(old,'utf8')===fs.readFileSync(current,'utf8'),old+': URL antiga deve manter o texto jurídico atualizado');
 }
 (async()=>{
  for(const url of localUrls){
