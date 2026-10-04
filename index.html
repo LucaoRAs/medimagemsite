@@ -52,7 +52,10 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Med&Imagem, início">
-          <img class="" src="img/logo_medimagem.png" width="475" height="100" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+          <span class="theme-logo">
+            <img class="theme-logo-light" src="img/logo28anosroxa.png" width="1920" height="1080" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+            <img class="theme-logo-dark" src="img/logo28anosbranca.png" width="1920" height="1080" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+          </span>
         </a>
         <nav id="main-navigation" class="main-nav" aria-label="Navegação principal">
           <a href="index.html" aria-current="page">
@@ -101,7 +104,7 @@
         <div class="container">
           <div class="banner-carousel" data-banner-carousel role="region" aria-roledescription="carrossel" aria-label="Banners institucionais">
             <div class="banner-stage">
-              <figure class="banner-slide" data-banner-slide data-banner-title="Mais que diagnosticar. Cuidar." role="group" aria-roledescription="slide" aria-label="1 de 5" >
+              <figure class="banner-slide" data-banner-slide data-banner-title="Mais que diagnosticar. Cuidar." role="group" aria-roledescription="slide" aria-label="1 de 5">
                 <picture>
                   <source media="(max-width: 700px)" srcset="img/optimized/banner-aniversario-720.jpg 720w, img/optimized/banner-aniversario-1080.jpg 1080w" sizes="calc(100vw - 40px)" width="1080" height="700">
                   <img src="img/optimized/banner-aniversario-1920.jpg" srcset="img/optimized/banner-aniversario-1280.jpg 1280w, img/optimized/banner-aniversario-1920.jpg 1920w" sizes="(max-width: 1264px) calc(100vw - 64px), 1200px" width="1920" height="700" alt="Campanha Med&amp;Imagem de 28 anos, com uma família reunida." fetchpriority="high" decoding="async">
@@ -118,9 +121,9 @@
                       Conheça a Med&amp;Imagem e nossos serviços em São Sebastião do Paraíso.
                     </p>
                   </div>
-                  <a class="button button-outline" href="#clinica" >
+                  <a class="button button-outline" href="#clinica">
                     Conheça a clínica
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="m9 5 7 7-7 7"/>
                     </svg>
                   </a>
@@ -143,9 +146,9 @@
                       Praticidade e comodidade para você.
                     </p>
                   </div>
-                  <a class="button button-outline" href="#destino" >
+                  <a class="button button-outline" href="#destino">
                     Acessar resultados
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="m9 5 7 7-7 7"/>
                     </svg>
                   </a>
@@ -168,9 +171,9 @@
                       Dos exames mais simples aos mais complexos.
                     </p>
                   </div>
-                  <a class="button button-outline" href="laboratorio.html" >
+                  <a class="button button-outline" href="laboratorio.html">
                     Conhecer os exames
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="m9 5 7 7-7 7"/>
                     </svg>
                   </a>
@@ -195,7 +198,7 @@
                   </div>
                   <a class="button button-outline" href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
                     Consultar agendamento
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="m9 5 7 7-7 7"/>
                     </svg>
                   </a>
@@ -218,9 +221,9 @@
                       Tecnologia de ponta com diagnósticos rápidos e precisos.
                     </p>
                   </div>
-                  <a class="button button-outline" href="ultrassonografia.html" >
+                  <a class="button button-outline" href="ultrassonografia.html">
                     Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                       <path d="m9 5 7 7-7 7"/>
                     </svg>
                   </a>
@@ -247,14 +250,15 @@
           </div>
         </div>
       </section>
-      <section class="hero">
+
+      <section class="hero" aria-labelledby="apresentacao-titulo">
         <div class="container hero-grid">
           <div>
             <span class="eyebrow">
               Centro de Diagnóstico Médico
             </span>
-            <h1>
-              Mais que diagnosticar.
+            <h1 id="apresentacao-titulo">
+              Mais do que diagnosticar.
               <span>
                 Cuidar.
               </span>
@@ -263,15 +267,15 @@
               Exames de imagem, cardiológicos e laboratoriais. Cuidado e acolhimento em São Sebastião do Paraíso, MG.
             </p>
             <div class="actions">
-              <a class="button " href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
+              <a class="button" href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
                 Agendar exame
-                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M14 4h6v6m0-6L10 14M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
                 </svg>
               </a>
               <a class="button button-outline" href="#destino">
                 Acessar resultados
-                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M5 12h14m-6-6 6 6-6 6"/>
                 </svg>
               </a>
@@ -280,7 +284,7 @@
           <figure class="hero-media">
             <img src="img/optimized/fachada-1200.jpg" srcset="img/optimized/fachada-640.jpg 640w, img/optimized/fachada-1200.jpg 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1264px) 46vw, 570px" width="1200" height="675" alt="Fachada da Med&amp;Imagem na Rua São Miguel, em São Sebastião do Paraíso" loading="lazy" decoding="async">
             <figcaption class="hero-caption">
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/>
                 <circle cx="12" cy="10" r="2.5"/>
               </svg>
@@ -288,404 +292,70 @@
             </figcaption>
           </figure>
         </div>
-      </section>
-      <nav class="container quick-links" aria-label="Acessos rápidos">
-        <a class="quick-link" href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
-          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <rect x="3" y="5" width="18" height="16" rx="2"/>
-            <path d="M7 3v4m10-4v4M3 11h18m-13 5 3 3 5-5"/>
-          </svg>
-          <span>
-            <strong>
-              Agende seu exame
-            </strong>
-            <small>
-              Fale com a nossa equipe
-            </small>
-          </span>
-          <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M5 12h14m-6-6 6 6-6 6"/>
-          </svg>
-        </a>
-        <a class="quick-link" href="#destino" >
-          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M14 3H5v18h14V8zm0 0v5h5M8 12h8m-8 4h6"/>
-          </svg>
-          <span>
-            <strong>
-              Acesse seus resultados
-            </strong>
-            <small>
-              Área do paciente e do médico
-            </small>
-          </span>
-          <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M5 12h14m-6-6 6 6-6 6"/>
-          </svg>
-        </a>
-        <a class="quick-link" href="#exames" >
-          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <rect x="3" y="3" width="7" height="7" rx="1"/>
-            <rect x="14" y="3" width="7" height="7" rx="1"/>
-            <rect x="3" y="14" width="7" height="7" rx="1"/>
-            <rect x="14" y="14" width="7" height="7" rx="1"/>
-          </svg>
-          <span>
-            <strong>
-              Encontre seu exame
-            </strong>
-            <small>
-              Conheça nossos serviços
-            </small>
-          </span>
-          <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M5 12h14m-6-6 6 6-6 6"/>
-          </svg>
-        </a>
-      </nav>
-      <section class="section" id="exames">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">
-                Nossos exames
-              </span>
-              <h2>
-                Cuidado em cada detalhe.
-              </h2>
-            </div>
-            <p>
-              Encontre o exame que você precisa e conheça como ele é realizado na Med&amp;Imagem.
-            </p>
-          </div>
-          <form class="search-form" role="search" hidden>
-            <label for="busca-exames">
-              Qual exame você procura?
-            </label>
-            <div class="search-control">
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <circle cx="10.5" cy="10.5" r="6.5"/>
-                <path d="m16 16 5 5"/>
-              </svg>
-              <input type="search" id="busca-exames" placeholder="Busque pelo nome do exame" autocomplete="off" data-exam-search aria-controls="lista-exames">
-              <button type="button" data-search-clear hidden>
-                Limpar
-              </button>
-            </div>
-            <p class="search-status" data-search-status role="status" aria-live="polite" aria-atomic="true">
-            </p>
-          </form>
-          <div id="lista-exames">
-            <ul class="exam-grid" data-exam-grid>
-              <li data-exam-name="Ressonância magnética">
-                <a class="exam-card" href="ressonancia_magnetica.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="10" r="8"/>
-                    <circle cx="12" cy="10" r="5"/>
-                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
-                  </svg>
-                  <h3>
-                    Ressonância magnética
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Tomografia computadorizada">
-                <a class="exam-card" href="tomografia.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="10" r="8"/>
-                    <circle cx="12" cy="10" r="5"/>
-                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
-                  </svg>
-                  <h3>
-                    Tomografia computadorizada
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Ultrassonografia">
-                <a class="exam-card" href="ultrassonografia.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <rect x="3" y="3" width="14" height="12" rx="2"/>
-                    <path d="M6 11c2-4 6-4 8 0M7 19h6m-3-4v4m7-12h2a2 2 0 0 1 2 2v6m-1 0h2v5h-2z"/>
-                  </svg>
-                  <h3>
-                    Ultrassonografia
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Mamografia digital">
-                <a class="exam-card" href="mamografiaDigital.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="10" r="8"/>
-                    <circle cx="12" cy="10" r="5"/>
-                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
-                  </svg>
-                  <h3>
-                    Mamografia digital
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Densitometria óssea">
-                <a class="exam-card" href="densitometria_ossea.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M7 3a3 3 0 0 0-3 5l3 2 7 7 2 3a3 3 0 0 0 5-3 3 3 0 0 0-3-5l-3-2-5-5a3 3 0 0 0-3-2Z"/>
-                  </svg>
-                  <h3>
-                    Densitometria óssea
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Radiografia digital">
-                <a class="exam-card" href="radiografia.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="10" r="8"/>
-                    <circle cx="12" cy="10" r="5"/>
-                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
-                  </svg>
-                  <h3>
-                    Radiografia digital
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Exames laboratoriais">
-                <a class="exam-card" href="laboratorio.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M9 3h6m-5 0v7L4 19a1.5 1.5 0 0 0 1 2h14a1.5 1.5 0 0 0 1-2l-6-9V3M7 15h10"/>
-                    <path d="M10 18h.01m4-1h.01"/>
-                  </svg>
-                  <h3>
-                    Exames laboratoriais
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Ecocardiograma">
-                <a class="exam-card" href="ecocardiograma.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/>
-                    <path d="M3 12h5l2-4 3 8 2-4h6"/>
-                  </svg>
-                  <h3>
-                    Ecocardiograma
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Eletrocardiograma">
-                <a class="exam-card" href="eletrocardiograma.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M3 12h3l3-8 5 16 3-8h4"/>
-                    <rect x="2" y="2" width="20" height="20" rx="3"/>
-                  </svg>
-                  <h3>
-                    Eletrocardiograma
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Holter 24 horas">
-                <a class="exam-card" href="holter.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/>
-                    <path d="M3 12h5l2-4 3 8 2-4h6"/>
-                  </svg>
-                  <h3>
-                    Holter 24 horas
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="M.A.P.A. 24 horas">
-                <a class="exam-card" href="mapa.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="12" r="9"/>
-                    <path d="M12 6v6l4 2"/>
-                  </svg>
-                  <h3>
-                    M.A.P.A. 24 horas
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Teste ergométrico">
-                <a class="exam-card" href="teste_ergometrico.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M3 12h3l3-8 5 16 3-8h4"/>
-                    <rect x="2" y="2" width="20" height="20" rx="3"/>
-                  </svg>
-                  <h3>
-                    Teste ergométrico
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-              <li data-exam-name="Punção biópsia">
-                <a class="exam-card" href="puncao_biopsia.html">
-                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <rect x="3" y="3" width="14" height="12" rx="2"/>
-                    <path d="M6 11c2-4 6-4 8 0M7 19h6m-3-4v4m7-12h2a2 2 0 0 1 2 2v6m-1 0h2v5h-2z"/>
-                  </svg>
-                  <h3>
-                    Punção biópsia
-                  </h3>
-                  <span class="card-link">
-                    Conhecer o exame
-                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M5 12h14m-6-6 6 6-6 6"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <p class="empty-state" data-search-empty hidden>
-            Nenhum exame encontrado. Tente outro nome ou limpe a busca para ver todos os exames.
-          </p>
-        </div>
-      </section>
-      <section class="section section-tint" id="clinica">
-        <div class="container split">
-          <figure class="clinic-photo">
-            <img src="img/optimized/ressonancia-1200.jpg" srcset="img/optimized/ressonancia-640.jpg 640w, img/optimized/ressonancia-1200.jpg 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1264px) 46vw, 570px" width="1200" height="774" alt="Sala de ressonância magnética da Med&amp;Imagem" loading="lazy" decoding="async">
-          </figure>
-          <div>
-            <span class="eyebrow">
-              A clínica
+        <nav class="container quick-links" aria-label="Acessos rápidos">
+          <a class="quick-link" href="https://wa.me/5535997226479?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meus%20exames!" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="5" width="18" height="16" rx="2"/>
+              <path d="M7 3v4m10-4v4M3 11h18m-13 5 3 3 5-5"/>
+            </svg>
+            <span>
+              <strong>
+                Agende seu exame
+              </strong>
+              <small>
+                Fale com a nossa equipe
+              </small>
             </span>
-            <h2>
-              Somos a Med&amp;Imagem.
-              <br>
-              Cuidamos de você.
-            </h2>
-            <p>
-              Somos sua referência em diagnóstico médico por imagem e exames laboratoriais em São Sebastião do Paraíso.
-            </p>
-            <p>
-              Realizamos exames cardiológicos, ressonância magnética, ultrassonografias, tomografias, mamografia, densitometria e exames laboratoriais com precisão nos resultados, excelência no atendimento e diagnóstico seguro.
-            </p>
-            <div class="clinic-note">
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/>
-                <path d="M3 12h5l2-4 3 8 2-4h6"/>
-              </svg>
-              <div>
-                <strong>
-                  Mais que diagnosticar. Cuidar.
-                </strong>
-                <span>
-                  Atendimento humanizado e acolhedor em cada etapa.
-                </span>
-              </div>
-            </div>
-            <a class="text-link" href="faleConosco.html">
-              Conheça nossos canais de atendimento
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M5 12h14m-6-6 6 6-6 6"/>
-              </svg>
-            </a>
-          </div>
-        </div>
+            <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+          <a class="quick-link" href="#destino">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M14 3H5v18h14V8zm0 0v5h5M8 12h8m-8 4h6"/>
+            </svg>
+            <span>
+              <strong>
+                Acesse seus resultados
+              </strong>
+              <small>
+                Área do paciente e do médico
+              </small>
+            </span>
+            <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+          <a class="quick-link" href="#exames">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            <span>
+              <strong>
+                Encontre seu exame
+              </strong>
+              <small>
+                Conheça nossos serviços
+              </small>
+            </span>
+            <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+        </nav>
       </section>
-      <section class="values" aria-labelledby="nossos-valores">
-        <div class="container values-inner">
-          <h2 id="nossos-valores">
-            Nossos valores
-          </h2>
-          <ul>
-            <li>
-              Ética
-            </li>
-            <li>
-              Qualidade
-            </li>
-            <li>
-              Bem-estar
-            </li>
-            <li>
-              Segurança
-            </li>
-            <li>
-              Tecnologia
-            </li>
-            <li>
-              Sustentabilidade
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section results" id="destino">
+
+      <section class="section results" id="destino" aria-labelledby="resultados-titulo" tabindex="-1">
         <div class="container">
           <div class="section-heading">
             <div>
               <span class="eyebrow">
                 Resultados de exames
               </span>
-              <h2>
+              <h2 id="resultados-titulo">
                 Seu resultado, ao seu alcance.
               </h2>
             </div>
@@ -694,23 +364,23 @@
             </p>
           </div>
           <div class="result-grid">
-            <article class="result-card">
+            <article class="result-card result-card-patient">
               <div class="icon-tile">
-                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <circle cx="12" cy="7" r="4"/>
                   <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
                 </svg>
               </div>
-              <div>
+              <div class="result-card-content">
                 <h3>
                   Área do paciente
                 </h3>
                 <p>
                   Acesse seus laudos e imagens pelo portal de resultados de exames.
                 </p>
-                <a class="button " href="http://medimagemssp3.ddns.net:8081/csadvweb/Patient/Login/Index" target="_blank" rel="noopener noreferrer">
+                <a class="button" href="http://medimagemssp3.ddns.net:8081/csadvweb/Patient/Login/Index" target="_blank" rel="noopener noreferrer">
                   Acessar como paciente
-                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                     <path d="M14 4h6v6m0-6L10 14M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
                   </svg>
                 </a>
@@ -718,12 +388,12 @@
             </article>
             <article class="result-card">
               <div class="icon-tile">
-                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M5 3v5a5 5 0 0 0 10 0V3M3 3h4m6 0h4m-7 10v3a5 5 0 0 0 10 0v-2"/>
                   <circle cx="20" cy="12" r="2"/>
                 </svg>
               </div>
-              <div>
+              <div class="result-card-content">
                 <h3>
                   Área do médico
                 </h3>
@@ -732,7 +402,7 @@
                 </p>
                 <a class="button button-outline" href="http://medimagemssp3.ddns.net:8081/csadvweb/Doctor/Login/Index" target="_blank" rel="noopener noreferrer">
                   Acessar como médico
-                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                     <path d="M14 4h6v6m0-6L10 14M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
                   </svg>
                 </a>
@@ -741,14 +411,15 @@
           </div>
         </div>
       </section>
-      <section class="section" id="estrutura">
+
+      <section class="section" id="estrutura" aria-labelledby="estrutura-titulo" tabindex="-1">
         <div class="container">
           <div class="section-heading">
             <div>
               <span class="eyebrow">
                 Nossa estrutura
               </span>
-              <h2>
+              <h2 id="estrutura-titulo">
                 Um espaço para acolher.
               </h2>
             </div>
@@ -778,13 +449,86 @@
           </div>
         </div>
       </section>
-      <section class="section contact-strip" id="contato">
+
+      <section class="section section-tint" id="clinica" aria-labelledby="clinica-titulo" tabindex="-1">
+        <div class="container split">
+          <figure class="clinic-photo">
+            <img src="img/optimized/ressonancia-1200.jpg" srcset="img/optimized/ressonancia-640.jpg 640w, img/optimized/ressonancia-1200.jpg 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1264px) 46vw, 570px" width="1200" height="774" alt="Sala de ressonância magnética da Med&amp;Imagem" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <span class="eyebrow">
+              A clínica
+            </span>
+            <h2 id="clinica-titulo">
+              Somos a Med&amp;Imagem.
+              <br>
+              Cuidamos de você.
+            </h2>
+            <p>
+              Somos sua referência em diagnóstico médico por imagem e exames laboratoriais em São Sebastião do Paraíso.
+            </p>
+            <p>
+              Realizamos exames cardiológicos, ressonância magnética, ultrassonografias, tomografias, mamografia, densitometria e exames laboratoriais com precisão nos resultados, excelência no atendimento e diagnóstico seguro.
+            </p>
+            <div class="clinic-note">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/>
+                <path d="M3 12h5l2-4 3 8 2-4h6"/>
+              </svg>
+              <div>
+                <strong>
+                  Mais que diagnosticar. Cuidar.
+                </strong>
+                <span>
+                  Atendimento humanizado e acolhedor em cada etapa.
+                </span>
+              </div>
+            </div>
+            <a class="text-link" href="faleConosco.html">
+              Conheça nossos canais de atendimento
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h14m-6-6 6 6-6 6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="values" aria-labelledby="nossos-valores">
+        <div class="container values-inner">
+          <h2 id="nossos-valores">
+            Nossos valores
+          </h2>
+          <ul>
+            <li>
+              Ética
+            </li>
+            <li>
+              Qualidade
+            </li>
+            <li>
+              Bem-estar
+            </li>
+            <li>
+              Segurança
+            </li>
+            <li>
+              Tecnologia
+            </li>
+            <li>
+              Sustentabilidade
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section contact-strip" id="contato" aria-labelledby="contato-titulo" tabindex="-1">
         <div class="container contact-layout">
           <div>
             <span class="eyebrow">
               Estamos perto de você
             </span>
-            <h2>
+            <h2 id="contato-titulo">
               Vamos cuidar de você?
             </h2>
             <p>
@@ -792,7 +536,7 @@
             </p>
             <a class="text-link" href="faleConosco.html">
               Todos os contatos
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M5 12h14m-6-6 6 6-6 6"/>
               </svg>
             </a>
@@ -808,7 +552,7 @@
             </address>
             <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Med%20%26%20Imagem%2C%20Rua%20S%C3%A3o%20Miguel%2C%20300%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Para%C3%ADso%2C%20MG" target="_blank" rel="noopener noreferrer">
               Como chegar
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M14 4h6v6m0-6L10 14M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
               </svg>
             </a>
@@ -823,12 +567,278 @@
               Das 6h30 às 18h
             </p>
             <a class="text-link" href="tel:+553535315710">
-              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 3H3v4c0 8 6 14 14 14h4v-4l-5-2-2 2a15 15 0 0 1-7-7l2-2-2-5Z"/>
               </svg>
               (35) 3531-5710
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="exames" aria-labelledby="exames-titulo" tabindex="-1">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">
+                Nossos exames
+              </span>
+              <h2 id="exames-titulo">
+                Cuidado em cada detalhe.
+              </h2>
+            </div>
+            <p>
+              Encontre o exame que você precisa e conheça como ele é realizado na Med&amp;Imagem.
+            </p>
+          </div>
+          <form class="search-form" role="search" hidden>
+            <label for="busca-exames">
+              Qual exame você procura?
+            </label>
+            <div class="search-control">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="10.5" cy="10.5" r="6.5"/>
+                <path d="m16 16 5 5"/>
+              </svg>
+              <input type="search" id="busca-exames" placeholder="Busque pelo nome do exame" autocomplete="off" data-exam-search aria-controls="lista-exames">
+              <button type="button" data-search-clear hidden>
+                Limpar
+              </button>
+            </div>
+            <p class="search-status" data-search-status role="status" aria-live="polite" aria-atomic="true">
+            </p>
+          </form>
+          <div id="lista-exames">
+            <ul class="exam-grid" data-exam-grid>
+              <li data-exam-name="Ressonância magnética">
+                <a class="exam-card" href="ressonancia_magnetica.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="10" r="8"/>
+                    <circle cx="12" cy="10" r="5"/>
+                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
+                  </svg>
+                  <h3>
+                    Ressonância magnética
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Tomografia computadorizada">
+                <a class="exam-card" href="tomografia.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="10" r="8"/>
+                    <circle cx="12" cy="10" r="5"/>
+                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
+                  </svg>
+                  <h3>
+                    Tomografia computadorizada
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Ultrassonografia">
+                <a class="exam-card" href="ultrassonografia.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3" y="3" width="14" height="12" rx="2"/>
+                    <path d="M6 11c2-4 6-4 8 0M7 19h6m-3-4v4m7-12h2a2 2 0 0 1 2 2v6m-1 0h2v5h-2z"/>
+                  </svg>
+                  <h3>
+                    Ultrassonografia
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Mamografia digital">
+                <a class="exam-card" href="mamografiaDigital.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="10" r="8"/>
+                    <circle cx="12" cy="10" r="5"/>
+                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
+                  </svg>
+                  <h3>
+                    Mamografia digital
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Densitometria óssea">
+                <a class="exam-card" href="densitometria_ossea.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7 3a3 3 0 0 0-3 5l3 2 7 7 2 3a3 3 0 0 0 5-3 3 3 0 0 0-3-5l-3-2-5-5a3 3 0 0 0-3-2Z"/>
+                  </svg>
+                  <h3>
+                    Densitometria óssea
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Radiografia digital">
+                <a class="exam-card" href="radiografia.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="10" r="8"/>
+                    <circle cx="12" cy="10" r="5"/>
+                    <path d="M8 10h8l2 12H6zm-4 7v5m16-5v5"/>
+                  </svg>
+                  <h3>
+                    Radiografia digital
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Exames laboratoriais">
+                <a class="exam-card" href="laboratorio.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M9 3h6m-5 0v7L4 19a1.5 1.5 0 0 0 1 2h14a1.5 1.5 0 0 0 1-2l-6-9V3M7 15h10"/>
+                    <path d="M10 18h.01m4-1h.01"/>
+                  </svg>
+                  <h3>
+                    Exames laboratoriais
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Ecocardiograma">
+                <a class="exam-card" href="ecocardiograma.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/>
+                    <path d="M3 12h5l2-4 3 8 2-4h6"/>
+                  </svg>
+                  <h3>
+                    Ecocardiograma
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Eletrocardiograma">
+                <a class="exam-card" href="eletrocardiograma.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 12h3l3-8 5 16 3-8h4"/>
+                    <rect x="2" y="2" width="20" height="20" rx="3"/>
+                  </svg>
+                  <h3>
+                    Eletrocardiograma
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Holter 24 horas">
+                <a class="exam-card" href="holter.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/>
+                    <path d="M3 12h5l2-4 3 8 2-4h6"/>
+                  </svg>
+                  <h3>
+                    Holter 24 horas
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="M.A.P.A. 24 horas">
+                <a class="exam-card" href="mapa.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                  <h3>
+                    M.A.P.A. 24 horas
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Teste ergométrico">
+                <a class="exam-card" href="teste_ergometrico.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 12h3l3-8 5 16 3-8h4"/>
+                    <rect x="2" y="2" width="20" height="20" rx="3"/>
+                  </svg>
+                  <h3>
+                    Teste ergométrico
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li data-exam-name="Punção biópsia">
+                <a class="exam-card" href="puncao_biopsia.html">
+                  <svg class="icon exam-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3" y="3" width="14" height="12" rx="2"/>
+                    <path d="M6 11c2-4 6-4 8 0M7 19h6m-3-4v4m7-12h2a2 2 0 0 1 2 2v6m-1 0h2v5h-2z"/>
+                  </svg>
+                  <h3>
+                    Punção biópsia
+                  </h3>
+                  <span class="card-link">
+                    Conhecer o exame
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="empty-state" data-search-empty hidden>
+            Nenhum exame encontrado. Tente outro nome ou limpe a busca para ver todos os exames.
+          </p>
         </div>
       </section>
     </main>
@@ -838,7 +848,10 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="index.html" aria-label="Med&Imagem, início">
-              <img class="" src="img/logo_medimagem.png" width="475" height="100" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+              <span class="theme-logo">
+                <img class="theme-logo-light" src="img/logo28anosroxa.png" width="1920" height="1080" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+                <img class="theme-logo-dark" src="img/logo28anosbranca.png" width="1920" height="1080" alt="Med&amp;Imagem — Centro de Diagnóstico Médico">
+              </span>
             </a>
             <p>
               Mais que diagnosticar. Cuidar.

@@ -27,6 +27,8 @@
   --hero-panel:#f2f6f7;
   --accent-line:#d1a9be;
   --control-line:#658795;
+  --logo-light-display:block;
+  --logo-dark-display:none;
   color-scheme:light;
 }
 :root[data-theme="dark"] {
@@ -42,6 +44,8 @@
   --hero-panel:#17262e;
   --accent-line:#a77794;
   --control-line:#78939f;
+  --logo-light-display:none;
+  --logo-dark-display:block;
   color-scheme:dark;
 }
 @media(prefers-color-scheme:dark) {
@@ -58,6 +62,8 @@
     --hero-panel:#17262e;
     --accent-line:#a77794;
     --control-line:#78939f;
+    --logo-light-display:none;
+    --logo-dark-display:block;
     color-scheme:dark;
   }
 }
@@ -298,10 +304,6 @@ ul {
   display:block;
   flex:0 0 192px
 }
-.brand img {
-  width:192px;
-  height:auto
-}
 .header-actions {
   display:flex;
   align-items:center;
@@ -338,9 +340,25 @@ ul {
 [data-theme="dark"] .theme-moon {
   display:none
 }
-.brand img,.footer-brand img {
-  background:#fff;
-  border-radius:3px
+/* O tema aplicado no head seleciona as logos antes da primeira renderização. */
+.theme-logo {
+  display:grid;
+  aspect-ratio:16/9
+}
+.theme-logo img {
+  grid-area:1/1;
+  align-self:center;
+  justify-self:center;
+  width:100%;
+  height:auto
+}
+.theme-logo-light {
+  display:var(--logo-light-display)
+}
+.theme-logo .theme-logo-dark {
+  display:var(--logo-dark-display);
+  /* Compensa a pequena diferença de margem transparente entre os originais. */
+  width:97.9%
 }
 .main-nav {
   display:flex;
@@ -498,8 +516,9 @@ input::placeholder {
 .quick-links {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  padding-block:30px;
-  border-bottom:1px solid var(--line)
+  margin-top:36px;
+  padding-block:24px 0;
+  border-top:1px solid var(--line)
 }
 .quick-link {
   display:flex;
@@ -758,7 +777,7 @@ input::placeholder {
 }
 .result-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:24px
 }
 .result-card {
@@ -767,8 +786,17 @@ input::placeholder {
   border-radius:var(--radius);
   border:1px solid var(--line);
   display:grid;
-  grid-template-columns:48px 1fr;
+  grid-template-columns:48px minmax(0,1fr);
   gap:20px
+}
+.result-card-patient {
+  border-color:var(--accent-line);
+  border-top:4px solid var(--wine)
+}
+.result-card-content {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start
 }
 .icon-tile {
   width:48px;
@@ -789,7 +817,14 @@ input::placeholder {
   margin-bottom:22px
 }
 .result-card .button {
-  font-size:.83rem
+  width:100%;
+  min-height:52px;
+  margin-top:auto;
+  font-size:.9rem;
+  text-align:center
+}
+.result-card .button-outline {
+  border-color:var(--link)
 }
 .contact-strip {
   border-top:1px solid var(--line)
@@ -1033,7 +1068,7 @@ input::placeholder {
   gap:42px;
   padding-bottom:40px
 }
-.footer-brand img {
+.footer-brand .theme-logo {
   width:190px;
   margin-bottom:22px
 }
@@ -1155,7 +1190,7 @@ input::placeholder {
   .header-inner {
     gap:20px
   }
-  .brand,.brand img {
+  .brand {
     width:166px;
     flex-basis:166px
   }
@@ -1305,7 +1340,7 @@ input::placeholder {
   .header-inner {
     min-height:83px
   }
-  .brand,.brand img {
+  .brand {
     width:165px;
     flex-basis:165px
   }
@@ -1347,7 +1382,8 @@ input::placeholder {
   }
   .quick-links {
     grid-template-columns:1fr;
-    padding-block:10px
+    margin-top:24px;
+    padding-block:0
   }
   .quick-link,.quick-link:first-child {
     padding:17px 4px;
@@ -1408,7 +1444,7 @@ input::placeholder {
   }
   .result-card {
     padding:24px;
-    grid-template-columns:40px 1fr;
+    grid-template-columns:minmax(0,1fr);
     gap:16px
   }
   .icon-tile {
@@ -1489,7 +1525,7 @@ input::placeholder {
 }
 @media(max-width:374px) {
   .header-inner { gap:8px; }
-  .brand,.brand img { width:145px; flex-basis:145px; }
+  .brand { width:145px; flex-basis:145px; }
 }
 @media(prefers-reduced-motion:reduce) {
   html {
@@ -1508,7 +1544,9 @@ input::placeholder {
     --muted:#333;
     --mist:#fff;
     --rose:#fff;
-    --link:#881c56
+    --link:#881c56;
+    --logo-light-display:block;
+    --logo-dark-display:none
   }
   .banner-controls,.theme-toggle {
     display:none!important
