@@ -1,0 +1,5 @@
+[1005/152607.584:ERROR:registration_protocol_win.cc(108)] CreateFile: Acesso negado. (0x5)
+[1005/152653.726:ERROR:registration_protocol_win.cc(108)] CreateFile: Acesso negado. (0x5)
+[1005/152701.055:ERROR:registration_protocol_win.cc(108)] CreateFile: Acesso negado. (0x5)
+[1005/152736.119:ERROR:registration_protocol_win.cc(108)] CreateFile: Acesso negado. (0x5)
+[1005/152826.279:ERROR:registration_protocol_win.cc(108)] CreateFile: Acesso negado. (0x5)
