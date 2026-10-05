@@ -37,7 +37,11 @@ Os arquivos antigos de JS/CSS dos carrosséis de **exames e galeria** permanecem
 
 ## Publicar na Hostinger
 
-Para publicar esta atualização, utilize os arquivos atuais do projeto seguindo os passos abaixo. Nenhum ZIP de publicação foi gerado nesta etapa; um pacote de uma versão anterior não contém o novo carrossel e as funcionalidades jurídicas.
+Pacote revisado em 05/10/2026: `.preview/medimagem-hostinger-20261005-r2.zip`. Extraia seu conteúdo diretamente em `public_html`: o ZIP contém `index.html` na raiz, as páginas e os assets utilizados, incluindo as logos de 28 anos e os banners de Outubro Rosa. Esta revisão substitui os ZIPs anteriores.
+
+Os erros de `null` relatados correspondem ao `JS/script.js` antigo, disponível no histórico: ele acessava `#celular`, `#menu-container`, `#carrossel`, `#carrossel_galeria` e `#footer`, que não existem mais na HOME. A versão local atual já removeu essa lógica. Publique HTML e assets juntos, substituindo o JavaScript antigo. A HOME agora solicita `JS/script.js?v=20261005` para invalidar o cache anterior; isso não substitui o envio do arquivo atualizado. Caso a hospedagem utilize cache adicional, limpe-o após o upload.
+
+As duas folhas de estilo da HOME também usam `?v=20261005` para evitar reutilizar CSS antigo. `script.js`, `banner-carousel.js` e `cookie-consent.js` usam `defer`; `theme.js` permanece no início do head. Os nomes físicos dos arquivos não incluem `?v=20261005`.
 
 1. Faça uma cópia de segurança dos arquivos atualmente em `public_html`.
 2. Envie os arquivos HTML da raiz, `sitemap.xml` e as pastas `style`, `JS`, `fonts`, `img`, `images` e `imgexames` para `public_html` pelo gerenciador de arquivos ou FTP. `index.html` deve ficar diretamente dentro de `public_html`.

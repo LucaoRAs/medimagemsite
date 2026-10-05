@@ -1,5 +1,20 @@
 # Registro da reformulação — Med&Imagem
 
+## Revisão para Hostinger — 05/10/2026
+
+Complemento da revisão (r2): versionadas também as URLs `style/style.css?v=20261005` e `style/cookie-consent.css?v=20261005` na HOME. Os arquivos físicos e seu conteúdo foram preservados. Confirmados `defer` nos scripts de interação e execução antecipada de `theme.js`. Nova execução em Edge verificou ambas as folhas carregadas e interpretadas, fonte e estilos computados aplicados, além das 14 combinações de largura/tema e interações descritas abaixo. Sem erros JavaScript ou HTTP. A causa do CSS ausente na hospedagem não foi confirmada remotamente; versionamento evita reutilização de cache anterior, mas requer upload das folhas atuais. Pacote mais recente: `.preview/medimagem-hostinger-20261005-r2.zip`. Não houve publicação remota.
+
+- A cópia local de `JS/script.js` já não contém os carregamentos legados. No histórico (`01ed753`), os erros relatados vêm de `getElementById('celular').addEventListener` e dos destinos `menu-container`, `carrossel`, `carrossel_galeria` e `footer`. Esses IDs não existem na HOME atual; os componentes já estão no HTML. Não é necessário recriar placeholders nem reescrever os scripts.
+- Alteração funcional restrita à URL `JS/script.js?v=20261005` na HOME, para solicitar uma versão nova ao navegador. É indispensável enviar também o JavaScript atual. A versão efetivamente servida pela hospedagem não pôde ser confirmada nesta sessão; cache antigo ou upload incompleto continuam sendo hipóteses para a divergência.
+- Conferidos 31 arquivos HTML/CSS/JS e 73 referências locais: nenhum caminho ausente, diferença de capitalização, referência a localhost ou caminho Windows. Nenhum caminho de asset precisou ser corrigido.
+- Teste em Edge headless por HTTP estático com checagem de capitalização, em 320, 375, 430, 768, 1024, 1366 e 1920 px, nos temas claro e escuro: menu, redes sociais, topbar, telefone, logos, imagens, HTML e cookies aprovados, sem overflow horizontal, exceções JavaScript ou respostas HTTP >= 400.
+- Testados os banners de Outubro Rosa em 390 e 1440 px, autoplay com espera real, setas, pausa/play, Home/End, swipe por eventos de ponteiro e pausa fora da viewport. O indicador existente é o contador `01 / 05`, validado após navegação. O HTML atual não tem botões de indicadores individuais; o layout foi preservado.
+- Cookies recusados persistem após reload. Os links externos mantêm `noopener noreferrer`; seus destinos foram preservados, sem testar atendimento ou autenticação nos serviços externos.
+- Quicksand existe, está declarada em `@font-face`, é utilizada pelo CSS e carregou no navegador. O preload aponta para o mesmo arquivo, com `as="font"`, `type="font/woff2"` e `crossorigin`; foi preservado. Não foi necessário remover a fonte nem alterar sua configuração.
+- Pacote `.preview/medimagem-hostinger-20261005.zip` gerado com as páginas e dependências estáticas, incluindo banners e logos atuais. `index.html` está na raiz do ZIP. Não inclui servidor, ferramentas, logs ou dependências de desenvolvimento. Publicação na Hostinger não executada.
+
+Relatórios locais: `.preview/hostinger-paths.json`, `.preview/hostinger-check.json` e `.preview/hostinger-extra.json`.
+
 ## Correção da retomada automática do carrossel
 
 Validação no Chrome, abrindo `index.html` diretamente: 10 verificações aprovadas com esperas reais, cobrindo autoplay, retomada após clique nas setas, hover, pausa explícita e foco por teclado, com e sem redução de animações. Relatório local: `.preview/autoplay-fix-validation.json`.
