@@ -71,13 +71,10 @@ for(const file of pages){
  const oldPath=path.join('.preview/originals',file);
  if(!fs.existsSync(oldPath))continue;
  const old=fs.readFileSync(oldPath,'utf8'), current=norm(fs.readFileSync(file,'utf8'));
- if(!['index.html','faleConosco.html','termosdeuso.html','politicadeprivacidade.html'].includes(file)){
+ if(!['index.html','faleConosco.html','termos-de-uso.html','politica-de-privacidade.html'].includes(file)){
   const parts=[...old.matchAll(/<div class="texto1\s*">([\s\S]*?)<\/div>/g)];
   for(const part of parts)check(current.includes(norm(part[1]).replace(/^Entre (\d+) a /,'De $1 a ')),file+': conteúdo de exame preservado');
  }
-}
-for(const [old,current] of [['termosdeuso.html','termos-de-uso.html'],['politicadeprivacidade.html','politica-de-privacidade.html']]){
- check(fs.readFileSync(old,'utf8')===fs.readFileSync(current,'utf8'),old+': URL antiga deve manter o texto jurídico atualizado');
 }
 (async()=>{
  for(const url of localUrls){

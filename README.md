@@ -1,6 +1,6 @@
 # Med&Imagem — site institucional
 
-Site em **HTML5, CSS3 e JavaScript puro**, pronto para upload na Hostinger. Não precisa de npm, build, banco de dados ou servidor de aplicação. As 17 páginas canônicas e as duas URLs jurídicas antigas contêm cabeçalho, navegação, conteúdo e rodapé no próprio HTML; continuam utilizáveis sem JavaScript.
+Site em **HTML5, CSS3 e JavaScript puro**, pronto para upload na Hostinger. Não precisa de npm, build, banco de dados ou servidor de aplicação. As 17 páginas canônicas contêm cabeçalho, navegação, conteúdo e rodapé no próprio HTML; continuam utilizáveis sem JavaScript.
 
 ## Visualizar
 
@@ -23,7 +23,7 @@ Acesse **http://127.0.0.1:8765/**. Esses comandos são apenas ferramentas locais
 - **Página inicial:** `index.html`, com o carrossel principal dos cinco banners originais, os 13 exames, clínica, resultados, estrutura e contatos.
 - **Exames:** cada arquivo HTML mantém sua URL original, inclusive `mamografiaDigital.html`.
 - **Contato:** `faleConosco.html`, com agendamento, recepção e ouvidoria separados. WhatsApp, telefone e e-mail são links diretos; não existe envio de formulário nem chamada à antiga API.
-- **Termos e privacidade:** `termos-de-uso.html` e `politica-de-privacidade.html`, com textos baseados nos recursos efetivamente presentes no projeto. `termosdeuso.html` e `politicadeprivacidade.html` mantêm cópias atualizadas, com canonical apontando para os novos endereços. Ao editar o texto jurídico, mantenha as duas versões sincronizadas.
+- **Termos e privacidade:** `termos-de-uso.html` e `politica-de-privacidade.html`, com transcrição integral dos PDFs oficiais da clínica. Estas são as únicas páginas jurídicas do site.
 - **Identidade e componentes:** `style/style.css`. As variáveis em `:root` centralizam vinho `#881C56`, azul `#658795`, variante `#638595`, fundos, bordas e espaçamentos. Quicksand local, pesos 400–700; licença em `fonts/OFL.txt`.
 - **Interações:** `JS/script.js`, com menu mobile, busca que ignora acentos e maiúsculas e entradas visuais discretas. A busca aparece somente quando o JavaScript está disponível.
 - **Carrossel de banners:** `JS/banner-carousel.js`. Mantém as cinco campanhas originais, contador, controles circulares, swipe e autoplay de seis segundos. Hover e foco por teclado pausam enquanto o visitante está no componente; cliques e swipe reiniciam o intervalo, sem deixar a reprodução parada permanentemente. Apenas o botão Pausar mantém a pausa até escolher Reproduzir. Setas do teclado, Home e End permitem navegar. A rotação para fora da tela e em aba oculta. `prefers-reduced-motion` remove os efeitos visuais pelo CSS, sem bloquear a troca automática ou ocultar o controle de pausa. A base da legenda integra o CTA e os controles sem divisórias. As imagens não são recortadas; as cópias otimizadas `img/optimized/banner-*` têm versões próprias para celular e desktop. O primeiro banner tem prioridade de carregamento; os demais mantêm lazy loading e decodificação antes da troca. A altura considera a maior legenda para evitar saltos entre slides.

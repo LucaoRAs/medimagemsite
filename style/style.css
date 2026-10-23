@@ -1101,6 +1101,17 @@ input::placeholder {
 .legal-copy li+li {
   margin-top:9px
 }
+.legal-copy.legal-document ul {
+  list-style-type:"* ";
+  margin-block:20px;
+  padding-left:1.5em
+}
+.legal-copy.legal-document>section {
+  margin-top:36px
+}
+.legal-copy.legal-document+p {
+  margin-top:36px
+}
 /* Rodapé e WhatsApp. */
 .site-footer {
   padding:56px 0 0;
